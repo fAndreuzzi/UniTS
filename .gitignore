@@ -2,5 +2,6 @@
 *.gz
 *.log
 *.fls
-*.fbd_latexmk
+*latexmk
 *.aux
+*.yaml
