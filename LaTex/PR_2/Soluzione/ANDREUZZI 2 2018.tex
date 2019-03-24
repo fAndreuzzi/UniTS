@@ -1,0 +1,155 @@
+ \documentclass[11pt,reqno]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ...
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[makeroom]{cancel}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage{color}
+
+%\date{}                                           % Activate to display a given date or no date
+
+
+\title{Prova Riservata 2 -  pagine 1-6}
+\author{CONSEGNA: mercoled\`{\i} 26 DICEMBRE 2018 ore 18.00}
+\begin{document}
+
+\maketitle
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=30mm]{machaon.jpg}
+\end{figure}
+
+{\bf Cognome e Nome: Andreuzzi Francesco}
+
+\bigskip
+{\bf Numero di Matricola: IN0500630}
+
+\bigskip
+{\bf Laurea in Ingegneria Informatica (applicazioni informatiche)}
+
+\bigskip
+{\bf Valutazione PR1: 26}
+
+\bigskip
+{\bf Bonus:}
+
+\bigskip
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=165mm]{pr1.png}
+\end{figure}
+
+\bigskip
+
+
+\bigskip
+
+\newpage
+
+\centerline{\bf Soluzione Esercizio 1 }
+\bigskip
+
+\begin{gather*}
+  \frac{\left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right|}{|a_{n+1} - a_n|} = \frac{\frac{\cancel{|a_{n+1}-a_n|}}{|a_na_{n+1}|}}{\cancel{|a_{n+1}-a_n|}} = \frac{1}{|a_na_{n+1}|} \tag{1}\\\\
+  \frac{|a_{n+1} - a_n|}{\left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right|} = \frac{\cancel{|a_{n+1}-a_n|}}{\frac{\cancel{|a_{n+1}-a_n|}}{|a_na_{n+1}|}} = |a_na_{n+1}| \tag{2}\\\\
+  \bullet \quad \sum |a_{n+1} - a_n| < \infty\\
+  \lim_{n \to \infty} a_na_{n+1} = a^2 \quad \implies \quad \lim_{n \to \infty} \frac{1}{a_na_{n+1}} = \frac{1}{a^2}\\
+  \implies \quad \forall \, \epsilon > 0 \quad \exists \, \overline{n}: \quad \forall \, n \geq \overline{n} \quad \left|\frac{1}{|a_na_{n+1}|} - \frac{1}{a^2}\right| < \epsilon \quad \implies \quad \frac{1}{a^2} - \epsilon < \frac{1}{|a_na_{n+1}|} < \frac{1}{a^2} + \epsilon\\
+  \epsilon = \frac{1}{2a^2} \quad \implies \quad \frac{1}{2a^2} < \frac{1}{|a_na_{n+1}|} < \frac{3}{2a^2}\\
+  \implies \quad \left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| < \frac{3}{2a^2}|a_{n+1} - a_n| \quad \forall \, n \geq \overline{n}_{\epsilon} \quad \quad \quad \text{per } \textbf{(1)}\\
+  \implies \quad \sum \left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| < \infty \quad \quad \quad \text{(} \textbf{(1.1)} \text{ in appendice)}\\\\
+  \bullet \quad \sum \left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| < \infty\\
+  \lim_{n \to \infty} a_na_{n+1} = a^2\\
+  \implies \quad \forall \, \epsilon > 0 \quad \exists \, \overline{n}: \quad \forall \, n \geq \overline{n} \quad \left||a_na_{n+1}| - a^2\right| < \epsilon \quad \implies \quad a^2 - \epsilon < |a_na_{n+1}| < a^2 + \epsilon\\
+  \epsilon = \frac{1}{2}a^2 \quad \implies \quad \frac{1}{2}a^2 < |a_na_{n+1}| < \frac{3}{2}a^2\\
+  \implies \quad |a_{n+1} - a_n| < \frac{3}{2}a^2\left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| \quad \forall \, n \geq \overline{n}_{\epsilon} \quad \quad \quad \text{per } \textbf{(2)}\\
+  \implies \quad \sum |a_{n+1} - a_n| < \infty \quad \quad \quad \text{(} \textbf{(1.1)} \text{ in appendice)}\\
+\end{gather*}
+
+\newpage
+
+\centerline{\bf Soluzione Esercizio 2 }
+{\bf i)}
+
+\begin{gather*}
+  \int_{(n-1)h}^{nh} f(x)dx \geq \int_{(n-1)h}^{nh} f(nh) \geq \int_{(n-1)h}^{nh} f(x+h)dx \quad \quad \text{(} f \text{ è } \textbf{decrescente} \text{)}\\
+  \int_{(n-1)h}^{nh} f(x+h)dx \quad \quad \stackrel{\mathclap{\tiny\mbox{$t=x+h$}}}{=} \quad \quad \int_{(n-1)h+h}^{nh + h} f(t)dt = \int_{nh}^{(n+1)h} f(t)dt\\
+  \int_{(n-1)h}^{nh} f(x)dx \geq \int_{(n-1)h}^{nh} f(nh) \geq \int_{nh}^{(n+1)h} f(x)dx \tag{3}\\
+  \int_{(n-1)h}^{nh} f(nh) = f(nh) (nh - nh + h) = hf(nh)\\
+  \text{Sommando per } n = 1,2,...\,: \quad \sum_{n = 1}^{\infty} \int_{(n-1)h}^{nh} f(x)dx \geq \sum_{n = 1}^{\infty} hf(nh) \geq \sum_{n = 1}^{\infty} \int_{nh}^{(n+1)h} f(x)dx\\
+  \int_{0}^{\infty} f(x)dx \geq h \sum_{n = 1}^{\infty} f(nh) \geq \int_{h}^{\infty} f(x)dx\\
+  \text{Se } h \to 0^{+} \quad \implies \quad \int_{0}^{\infty} f(x)dx \geq h \sum_{n = 1}^{\infty} f(nh) \geq \int_{0}^{\infty} f(x)dx\\
+  \text{Per il teorema dei } \textbf{carabinieri}: \quad \int_{0}^{\infty} f(x)dx = \lim_{h \to 0^{+}} h \sum_{n = 1}^{\infty} f(nh)\\
+  \text{--------------------------------------------}\\
+  \lim_{h \to 0^{+}} \sum_{n = 1}^{\infty} \frac{h}{1 + h^2x^2} = \lim_{h \to 0^{+}} h \sum_{n = 1}^{\infty} \frac{1}{1 + h^2x^2} = \int_{0}^{\infty} \frac{1}{1 + x^2}dx = [\arctan(x)]_{x=0}^{x \to \infty} = \frac{\pi}{2} - 0 = \frac{\pi}{2}\\\\\\
+  \textbf{Nota}: \text{ è necessario che } h \to 0^{+} \text{ (e non } h \to 0^{-} \text{) perchè la catena di disuguaglianze } \textbf{(3)}\\
+  \text{non risulta valida per valori } \textbf{negativi} \text{ di } h\\\\
+  \text{Avremmo infatti che } (n+1)h < nh < (n-1)h\\
+  \implies \quad \int_{nh}^{(n+1)h} f(x)dx \geq \int_{(n-1)h}^{nh} f(nh) \geq \int_{(n-1)h}^{nh} f(x)dx
+\end{gather*}
+
+\newpage
+
+\centerline{\bf Soluzione Esercizio 2 }
+
+{\bf ii)}
+\begin{gather*}
+  f \text{ è } \textbf{integrabile} \text{ sul suo dominio perchè è } \textbf{continua}\\
+  \text{Anche } xf(x) \text{ è } \textbf{integrabile} \text{ perchè è un prodotto di funzioni } \textbf{continue}\\\\
+  F(x) := \int_{0}^{x} f(t) dt\\\\
+  \text{Calcoliamo } \textbf{per parti} \text{ una primitiva di } xf(x):\\
+  \int xf(x) dx = xF(x) - \int F(x) dx\\\\
+  \frac{1}{n} \int_{0}^{n} xf(x) dx = \frac{1}{n}\left(nF(n) - \int_{0}^{n} F(x) dx\right) = F(n) - \frac{1}{n} \int_{0}^{n} F(x) dx\\\\
+  \text{Per il teorema di } \textbf{Cesàro} \text{, siccome } \exists \, \lim_{x \to \infty} F(x) = \int_{0}^{\infty} f(x)dx < \infty\\
+  \implies \quad \lim_{n \to \infty} \frac{1}{n} \int_{0}^{n} F(x) dx = \lim_{n \to \infty} F(n)\\\\
+  \lim_{n \to \infty} \frac{1}{n} \int_{0}^{n} xf(x) dx = \lim_{n \to \infty} F(n) - \frac{1}{n} \int_{0}^{n} F(x) dx = \lim_{n \to \infty} F(n) - F(n) = 0\\
+\end{gather*}
+
+\newpage
+
+\centerline{\bf Soluzione Esercizio 3 }
+
+\bigskip
+
+\begin{gather*}
+  \text{Dimostriamo che } g(x) \textbf{ non è} \text{ uniformemente continua in } \mathbb{R}\\\\
+  a_n := \frac{2}{3}n^2\pi + \frac{1}{3n} \quad \quad b_n := \frac{2}{3}n^2\pi\\
+  |a_n - b_n| = \left|\frac{2}{3}n^2\pi + \frac{1}{3n} - \frac{2}{3}n^2\pi\right| = \left|\frac{1}{3n}\right| \to 0\\\\
+  |g(a_n) - g(b_n)| = \left|\left|\frac{2}{3}n^2\pi + \frac{1}{3n}\right|\sin(2n^2\pi + \frac{1}{n}) - \cancel{\left|\frac{2}{3}n^2\pi\right|\sin(2n^2\pi)}\right|\\
+  = \left|\left(\frac{2}{3}n^2\pi + \frac{1}{3n}\right)\left[\cancel{\sin(2n^2\pi)\cos\left(\frac{1}{n}\right)}+\cos(2n^2\pi)\sin\left(\frac{1}{n}\right)\right]\right|\\
+  = \left|\left(\frac{2}{3}n^2\pi + \frac{1}{3n}\right)\sin\left(\frac{1}{n}\right)\right| \quad \cancel{\longrightarrow} \quad 0\\\\
+  \text{La successione} \quad \left(\frac{2}{3}n^2\pi + \frac{1}{3n}\right)\sin\left(\frac{1}{n}\right) \quad \textbf{diverge} \text{, dato che}\\
+  \left(\frac{2}{3}n^2\pi + \frac{1}{3n}\right)\sin\left(\frac{1}{n}\right) > n^2\sin\left(\frac{1}{n}\right) \quad \forall \, n\\
+  \text{e la successione} \quad n^2\sin\left(\frac{1}{n}\right) \quad \textbf{diverge} \quad \text{(punto } \textbf{(3.1)} \text{ in appendice)}
+\end{gather*}
+
+\newpage
+
+\centerline{\bf APPENDICE }
+
+{\bf 1.1)}
+\begin{gather*}
+  \sum a_n < +\infty\\
+  \exists \, C > 0, \quad \exists \, \overline{n}: \quad b_n < Ca_n \quad \forall \, n \geq \overline{n}\\
+  \implies \quad \sum b_n < +\infty\\\\
+  \sum_{n = 1}^{\infty} b_n = \sum_{n = 1}^{\overline{n} - 1} b_n + \sum_{n = \overline{n}}^{\infty} b_n \quad \quad \text{(con } \sum_{n = 1}^{\overline{n} - 1} b_n < \infty \text{)}\\
+  \sum_{n = \overline{n}}^{\infty} b_n \leq \sum_{n = \overline{n}}^{\infty} Ca_n = C\sum_{n = \overline{n}}^{\infty} a_n < \infty\\
+  \implies \quad \sum_{n = 1}^{\infty} b_n \leq \sum_{n = 1}^{\overline{n} - 1} b_n + C\sum_{n = \overline{n}}^{\infty} a_n < \infty\\\\
+\end{gather*}
+
+{\bf 3.1)}
+\begin{gather*}
+  n^2 \sin\left(\frac{1}{n}\right) \quad \quad \stackrel{\mathclap{\tiny\mbox{\boldmath$n \to \infty$}}}{\sim} \quad \quad n^2\frac{1}{n} = n\\
+  \implies \quad \lim_{n \to \infty} n^2 \sin\left(\frac{1}{n}\right) = \lim_{n \to \infty} n = \infty
+\end{gather*}
+
+\end{document}

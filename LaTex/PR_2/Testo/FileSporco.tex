@@ -1,0 +1,290 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ...
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[makeroom]{cancel}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage{color}
+
+%\date{}                                           % Activate to display a given date or no date
+
+
+\title{Prova Riservata 2 -  pagine 1-9}
+\author{CONSEGNA: mercoled\`{\i} 26 DICEMBRE 2018 ore 18.00}
+\begin{document}
+
+\maketitle
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=30mm]{machaon.jpg}
+\end{figure}
+
+{\bf Cognome e Nome: Andreuzzi Francesco}
+
+\bigskip
+{\bf Numero di Matricola: }
+
+\bigskip
+{\bf Laurea in Ingegneria Informatica (applicazioni informatiche)}
+
+\bigskip
+{\bf Valutazione PR1: 26}
+
+\bigskip
+{\bf Bonus: 0}
+
+
+
+\bigskip
+
+
+\bigskip
+
+\newpage
+
+\centerline{\bf Soluzione Esercizio 1 }
+\bigskip
+
+\iffalse
+\begin{gather*}
+ x_n := |a_{n+1}-a_n| \quad \quad y_n := \left|\frac{1}{a_{n+1}} - \frac{1}{a_n}\right| = \frac{|a_{n+1} - a_n|}{|(a_{n+1})(a_n)|} \quad z_n := |(a_{n+1})(a_n)|\\
+ \lim_{n \to \infty} z_n = \lim_{n \to \infty} |a_n| \lim_{n \to \infty} |a_{n+1}| = a^2 \in \mathbb{R} \quad \implies \quad (z_n) \text{ è } \textbf{limitata}\\\\
+ x_n = y_nz_n \quad \forall \, n \quad \implies \quad \sum x_n = \sum y_nz_n\\
+ \text{Se } \sum y_n \,\, \textbf{converge} \text{, converge anche } \sum y_nz_n \quad \text{(punto } \textbf{(1.1/1.1b)} \text{ in appendice)}\\
+ \implies \quad \sum x_n \quad \textbf{converge}\\\\
+ y_n = \frac{x_n}{z_n} \quad \forall \, n \quad \implies \quad \sum y_n = \sum \frac{x_n}{z_n}\\
+ \text{(condizione } \textbf{necessaria} \text{ affinchè } (y_n) \text{ converga è che } a_n \neq 0 \quad \forall \, n \text{)}\\
+ \text{Se } \sum x_n \,\, \textbf{converge} \text{, converge anche } \sum \frac{x_n}{z_n} \quad \text{(punto } \textbf{(1.2/1.2b)} \text{ in appendice)}\\
+ \implies \quad \sum y_n \quad \textbf{converge}\\\\\\
+ \lim_{n \to \infty} a_na_{n+1} = a^2 \quad \implies \quad \lim_{n \to \infty} \frac{1}{a_na_{n+1}} = \frac{1}{a^2}\\
+ \implies \quad \forall \, \epsilon > 0 \quad \exists \, \overline{n}: \quad \forall \, n \geq \overline{n} \quad \left|\frac{1}{a_na_{n+1}} - \frac{1}{a^2}\right| < \epsilon\\
+ \implies \quad \frac{1}{a^2} - \epsilon < \left|\frac{1}{a_na_{n+1}}\right| < \frac{1}{a^2} + \epsilon\\
+ \epsilon = \frac{1}{2a^2} \quad \implies \quad \frac{1}{2a^2} < \left|\frac{1}{a_na_{n+1}}\right| < \frac{3}{2a^2}\\\\
+ \text{Osserviamo che} \quad \frac{\left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right|}{|a_{n+1} - a_n|} = \frac{\frac{\cancel{|a_{n+1}-a_n|}}{a_na_{n+1}}}{\cancel{|a_{n+1}-a_n|}} = \frac{1}{|a_na_{n+1}|}\\\\
+ \bullet \quad \sum |a_{n+1} - a_n| < \infty\\
+ \implies \quad \left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| < \frac{3}{2a^2}|a_{n+1} - a_n| \quad \forall \, n \geq \overline{n}_{\epsilon}\\ \implies \quad \sum \left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| < \infty \quad \quad \text{(punto } \textbf{(1.1)} \text{ in appendice)}\\\\
+ \bullet \quad \sum \left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| < \infty\\
+ \frac{1}{2a^2} < \frac{\left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right|}{|a_{n+1} - a_n|} \quad \implies \quad 2a^2 > \frac{|a_{n+1} - a_n|}{\left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right|}\\
+ \implies \quad |a_{n+1} - a_n| < 2a^2\left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| \quad \forall \, n \geq \overline{n}_{\epsilon}\\
+ \implies \quad \sum |a_{n+1} - a_n| < \infty \quad \quad \text{(punto } \textbf{(1.1)} \text{ in appendice)}\\
+\end{gather*}
+\fi
+
+\begin{gather*}
+ \text{Osserviamo che} \quad \frac{\left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right|}{|a_{n+1} - a_n|} = \frac{\frac{\cancel{|a_{n+1}-a_n|}}{a_na_{n+1}}}{\cancel{|a_{n+1}-a_n|}} = \frac{1}{|a_na_{n+1}|} \tag{1}\\\\
+ \bullet \quad \sum |a_{n+1} - a_n| < \infty\\
+ \lim_{n \to \infty} a_na_{n+1} = a^2 \quad \implies \quad \lim_{n \to \infty} \frac{1}{a_na_{n+1}} = \frac{1}{a^2}\\
+ \implies \quad \forall \, \epsilon > 0 \quad \exists \, \overline{n}: \quad \forall \, n \geq \overline{n} \quad \left|\frac{1}{|a_na_{n+1}|} - \frac{1}{a^2}\right| < \epsilon \quad \implies \quad \frac{1}{a^2} - \epsilon < \frac{1}{|a_na_{n+1}|} < \frac{1}{a^2} + \epsilon\\
+ \epsilon = \frac{1}{2a^2} \quad \implies \quad \frac{1}{2a^2} < \frac{1}{|a_na_{n+1}|} < \frac{3}{2a^2}\\
+ \implies \quad \left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| < \frac{3}{2a^2}|a_{n+1} - a_n| \quad \forall \, n \geq \overline{n}_{\epsilon} \quad \quad \quad \text{per } \textbf{(1)}\\
+ \implies \quad \sum \left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| < \infty \quad \quad \text{(punto } \textbf{(1.1)} \text{ in appendice)}\\\\
+ \bullet \quad \sum \left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| < \infty\\
+ \lim_{n \to \infty} a_na_{n+1} = a^2 \quad \implies \quad \forall \, \epsilon > 0 \quad \exists \, \overline{n}: \quad \forall \, n \geq \overline{n} \quad \left||a_na_{n+1}| - a^2\right| < \epsilon\\
+ \implies a^2 - \epsilon < |a_na_{n+1}| < a^2 + \epsilon\\
+ \epsilon = \frac{1}{2}a^2 \quad \implies \quad \frac{1}{2}a^2 < |a_na_{n+1}| < \frac{3}{2}a^2\\
+ \implies \quad |a_{n+1} - a_n| < \frac{3}{2}a^2\left|\frac{1}{a_{n+1}}-\frac{1}{a_n}\right| \quad \forall \, n \geq \overline{n}_{\epsilon} \quad \quad \quad \text{per } \textbf{(1)}\\
+ \implies \quad \sum |a_{n+1} - a_n| < \infty \quad \quad \text{(punto } \textbf{(1.1)} \text{ in appendice)}\\
+\end{gather*}
+
+\newpage
+
+\centerline{\bf Soluzione Esercizio 2 }
+{\bf i)}
+
+\begin{gather*}
+ \int_{(n-1)h}^{nh} f(x)dx \geq \int_{(n-1)h}^{nh} f(nh) \geq \int_{nh}^{(n+1)h} f(x)dx \quad \quad \text{(} f \text{ è } \textbf{decrescente} \text{)}\\
+ \int_{(n-1)h}^{nh} f(nh) = f(nh) (nh - nh + h) = hf(nh)\\
+ \text{Sommando per } n = 1,2,...,\infty: \quad \sum_{n = 1}^{\infty} \int_{(n-1)h}^{nh} f(x)dx \geq \sum_{n = 1}^{\infty} hf(nh) \geq \sum_{n = 1}^{\infty} \int_{nh}^{(n+1)h} f(x)dx\\
+ \int_{0}^{\infty} f(x)dx \geq h \sum_{n = 1}^{\infty} f(nh) \geq \sum_{n = 1}^{\infty} \int_{h}^{\infty} f(x)dx\\
+ \text{Se } h \to 0^{+} \quad \implies \quad \int_{0}^{\infty} f(x)dx \geq h \sum_{n = 1}^{\infty} f(nh) \geq \int_{0}^{\infty} f(x)dx\\
+ \text{Per il teorema dei } \textbf{carabinieri}: \quad \int_{0}^{\infty} f(x)dx = \lim_{h \to 0^{+}} h \sum_{n = 1}^{\infty} f(nh)\\\\
+ \lim_{h \to 0^{+}} \sum_{n = 1}^{\infty} \frac{h}{1 + h^2x^2} = \lim_{h \to 0^{+}} h \sum_{n = 1}^{\infty} \frac{1}{1 + h^2x^2} = \int_{0}^{\infty} \frac{1}{1 + x^2}dx = [\arctan(x)]_{x=0}^{x \to \infty} = \frac{\pi}{2} - 0 = \frac{\pi}{2}
+\end{gather*}
+
+\newpage
+
+\centerline{\bf Soluzione Esercizio 2 }
+\begin{gather*}
+\end{gather*}
+
+{\bf ii)}
+\iffalse
+\begin{gather*}
+ \lim_{n \to \infty} \frac{1}{n} \int_{0}^{n} xf(x) dx = \lim_{n \to \infty} \frac{\displaystyle\int_{0}^{n} xf(x) dx}{n} = \lim_{n \to \infty} \frac{\displaystyle\int_{0}^{1} xf(x) dx \,\, + \ldots + \int_{n-1}^{n} xf(x) dx}{n}\\
+ i_n := \int_{n-1}^{n} xf(x) dx\\
+ \text{Se } \exists \, \lim_{n \to \infty} i_n \quad \stackrel{\mathclap{\tiny\mbox{Cesàro}}}{\implies} \quad \lim_{n \to \infty} i_n = \lim_{n \to \infty} \frac{1}{n} \int_{0}^{n} xf(x) dx\\\\
+ \lim_{n \to \infty} i_n = \lim_{n \to \infty} \int_{n-1}^{n} xf(x) dx = \frac{1}{n-n+1} \int_{n-1}^{n} xf(x) dx = \theta f(\theta) \quad \text{per qualche } \theta \in (n-1,n)\\\\
+ \text{Siccome } \theta \in (n-1,n) \quad n \to \infty \quad \implies \quad \theta \to \infty\\
+ \lim_{\theta \to \infty} \theta f(\theta) = 0 \quad \text{(punto } \textbf{(2.2)} \text{ in appendice)}\\\\
+ \implies \lim_{n \to \infty} \frac{1}{n} \int_{0}^{n} xf(x) dx = 0
+\end{gather*}
+\fi
+
+\newpage
+
+\centerline{\bf Soluzione Esercizio 3 }
+
+\bigskip
+
+\begin{gather*}
+ \text{Dimostriamo che } g(x) \textbf{ non è} \text{ uniformemente continua in } \mathbb{R}\\\\
+ a_n := \frac{2}{3}n^2\pi + \frac{1}{3n} \quad b_n := \frac{2}{3}n^2\pi\\
+ |a_n - b_n| = \left|\frac{2}{3}n^2\pi + \frac{1}{3n} - \frac{2}{3}n^2\pi\right| = \left|\frac{1}{3n}\right| \to 0\\\\
+ |g(a_n) - g(b_n)| = \left|\left|\frac{2}{3}n^2\pi + \frac{1}{3n}\right|\sin(2n^2\pi + \frac{1}{n}) - \cancel{\left|\frac{2}{3}n^2\pi\right|\sin(2n^2\pi)}\right|\\
+ = \left|\left(\frac{2}{3}n^2\pi + \frac{1}{3n}\right)\left[\cancel{\sin(2n^2\pi)\cos\left(\frac{1}{n}\right)}+\cos(2n^2\pi)\sin\left(\frac{1}{n}\right)\right]\right|\\
+ = \left|\left(\frac{2}{3}n^2\pi + \frac{1}{3n}\right)\sin\left(\frac{1}{n}\right)\right| \quad \cancel{\longrightarrow} \quad 0\\\\
+ \text{La successione} \quad \left(\frac{2}{3}n^2\pi + \frac{1}{3n}\right)\sin\left(\frac{1}{n}\right) \quad \textbf{diverge} \text{, dato che}\\
+ \left(\frac{2}{3}n^2\pi + \frac{1}{3n}\right)\sin\left(\frac{1}{n}\right) > n^2\sin\left(\frac{1}{n}\right) \quad \forall \, n\\
+ \text{e la successione} \quad n^2\sin\left(\frac{1}{n}\right) \quad \textbf{diverge} \quad \text{(punto } \textbf{(3)} \text{ in appendice)}
+\end{gather*}
+
+\newpage
+
+\centerline{\bf APPENDICE }
+
+\iffalse
+{\bf 1.1)}
+\begin{gather*}
+ \text{Sia } \sum a_n \to L \in \mathbb{R} \quad \text{(con } a_n \geq 0 \quad \forall \, n \text{)}\\
+ \text{Sia } (b_n) \text{ una successione } \textbf{limitata} \quad \text{(con } b_n \geq 0 \quad \forall \, n \text{)}\\
+ \implies \sum a_nb_n \quad \textbf{converge}\\\\
+ \sum a_nb_n \leq \sum a_n\sup b_n = \sup b_n \sum a_n = L\sup b_n\\
+ \text{Quindi } \sum a_nb_n \text{ è } \textbf{monotona} \text{ e } \textbf{limitata}\\
+ \implies \quad \sum a_nb_n \quad \textbf{converge}
+\end{gather*}
+
+{\bf 1.1b)}
+\begin{gather*}
+ \text{La proposizione si può dimostrare con il } \textbf{criterio del confronto asintotico}:\\\\
+ \text{Se } \lim_{n \to \infty} b_n = b \in \mathbb{R} \neq 0\\
+ \lim_{n \to \infty} \frac{\cancel{a_n}b_n}{\cancel{a_n}} = \lim_{n \to \infty} b_n = b\\
+ \implies \quad \sum a_nb_n \quad \textbf{converge} \text{ per il } \textbf{criterio del confronto asintotico}
+\end{gather*}
+
+{\bf 1.2)}
+\begin{gather*}
+ \text{Sia } \sum a_n \to L \in \mathbb{R} \quad \text{(con } a_n \geq 0 \quad \forall \, n \text{)}\\
+ \text{Sia } (b_n) \text{ una successione } \textbf{limitata} \quad \text{(con } b_n > 0 \quad \forall \, n \text{)}\\
+ \implies \sum \frac{a_n}{b_n} \quad \textbf{converge}\\\\
+ \sum \frac{a_n}{b_n} \leq \sum \frac{a_n}{\inf b_n} = \frac{\sum a_n}{\inf b_n} = \frac{L}{\inf b_n}\\
+ \text{Quindi } \sum \frac{a_n}{b_n} \text{ è } \textbf{monotona} \text{ e } \textbf{limitata}\\
+ \implies \quad \sum \frac{a_n}{b_n} \quad \textbf{converge}
+\end{gather*}
+
+{\bf 1.2b)}
+\begin{gather*}
+ \text{La proposizione si può dimostrare con il } \textbf{criterio del confronto asintotico}:\\\\
+ \text{Se } \lim_{n \to \infty} b_n = b \in \mathbb{R} \neq 0\\
+ \lim_{n \to \infty} \frac{\frac{\cancel{a_n}}{b_n}}{\cancel{a_n}} = \lim_{n \to \infty} \frac{1}{b_n} = \frac{1}{b}\\
+ \implies \quad \sum a_nb_n \quad \textbf{converge} \text{ per il } \textbf{criterio del confronto asintotico}\\
+\end{gather*}
+
+{\bf 1.3)}
+\begin{gather*}
+ \lim_{n \to \infty} a_n = L\\
+ \implies \quad \lim_{n \to \infty} |a_n| = |L|\\\\
+ \text{Per la definizione di } \textbf{limite} \text{:} \quad \forall \, \epsilon > 0 \quad \exists \, \overline{n}: \quad \forall n \geq \overline{n}\\
+ |a_n - L| < \epsilon\\
+ \text{Per la } \textbf{lipschitzianità} \text{ del valore assoluto:}\\
+ ||a_n| - |L|| < |a_n - L| < \epsilon\\
+ \implies \quad ||a_n| - |L|| < \epsilon\\
+ \text{Quindi } |L| \text{ è il } \textbf{limite} \text{ della successione } (|a_n|)
+\end{gather*}
+\fi
+
+{\bf 1.1)}
+\begin{gather*}
+ \sum a_n < +\infty\\
+ \exists \, C > 0, \quad \exists \, \overline{n}: \quad b_n < Ca_n \quad \forall \, n \geq \overline{n}\\
+ \implies \quad \sum b_n < +\infty\\\\
+ \sum_{n = 1}^{\infty} b_n = \sum_{n = 1}^{\overline{n}} b_n + \sum_{n = \overline{n} + 1}^{\infty} b_n \quad \quad \text{(con } \sum_{n = 1}^{\overline{n}} b_n < \infty \text{)}\\
+ \sum_{n = \overline{n} + 1}^{\infty} b_n \leq \sum_{n = \overline{n} + 1}^{\infty} Ca_n = C\sum_{n = \overline{n} + 1}^{\infty} a_n < \infty\\
+ \implies \quad \sum_{n = 1}^{\infty} b_n \leq \sum_{n = 1}^{\overline{n}} b_n + C\sum_{n = \overline{n} + 1}^{\infty} a_n < \infty
+\end{gather*}
+
+\newpage
+
+\iffalse
+\centerline{\bf APPENDICE }
+{\bf 2.0)}
+\begin{gather*}
+ \text{Sia } f:\mathbb{R}\to\mathbb{R}_0^{+}: \quad \int_{0}^{\infty} f(x) dx < +\infty\\
+ \quad \implies \quad \exists \lim_{x \to \infty} f(x)\\\\
+ \text{Supponiamo per } \textbf{assurdo} \text{ che } \not\exists \lim_{x \to \infty} f(x)\\
+ \implies \forall L \quad \exists \, \epsilon_{L} > 0, \,\, \exists \, x: \quad |f(x) - L| \geq \epsilon_{L}\\
+ \implies \quad f(x) < L - \epsilon_{L}
+\end{gather*}
+
+{\bf 2.1)}
+\begin{gather*}
+ \text{Sia } f:\mathbb{R}\to\mathbb{R}_0^{+}: \quad \int_{0}^{\infty} f(x) dx < +\infty\\
+ \quad \implies \quad \lim_{x \to \infty} f(x) = 0\\\\
+ \text{Supponiamo per } \textbf{assurdo} \text{ che } \lim_{x \to \infty} f(x) = a \in \mathbb{R}^{+} \quad \text{(se a } = +\infty \text{ la dimostrazione è banale)}\\
+ \implies \quad \forall \, \epsilon > 0 \quad \exists \, \overline{x}: \quad \forall x \geq \overline{x} \quad |f(x) - a| < \epsilon\\
+ \text{Prendiamo } \epsilon = \frac{a}{2} \text{ ed il corrispondente } \overline{x}_{\epsilon = \frac{a}{2}}\\
+ \implies \quad \forall \, x \geq \overline{x}_{\epsilon = \frac{a}{2}} \quad f(x) - a > -\frac{a}{2} \quad \implies \quad f(x) > \frac{a}{2}\\
+ \int_{0}^{\infty} f(x) dx = \int_{0}^{\overline{x}} f(x) dx + \lim_{t \to \infty} \int_{\overline{x}}^{t} f(x) dx\\
+ \text{Per la } \textbf{monotonia} \text{ dell'integrale}: \quad \lim_{t \to \infty} \int_{\overline{x}}^{t} f(x) dx > \lim_{t \to \infty} \int_{\overline{x}}^{t} \frac{a}{2} = \lim_{t \to \infty} \frac{a}{2} (t-\overline{x}) = +\infty\\
+ \implies \quad \int_{0}^{\infty} f(x) dx \quad \textbf{diverge} \text{, che è } \textbf{assurdo} \text{ per ipotesi}\\
+\end{gather*}
+
+{\bf 2.2)}
+\begin{gather*}
+ \text{Sia } f:\mathbb{R}\to\mathbb{R}_0^{+}: \quad \int_{0}^{\infty} f(x) dx < +\infty\\
+ \quad \implies \quad f(x) = \underset{x \to \infty}{o}\left(\frac{1}{x}\right)\\\\
+ \text{Supponiamo per } \textbf{assurdo} \text{ che } f(x) \text{ non sia } \underset{x \to \infty}{o}\left(\frac{1}{x}\right) \quad \implies \quad \lim_{x \to \infty} \frac{f(x)}{\frac{1}{x}} = \lim_{x \to \infty} xf(x) = a > 0\\\\
+ \bullet \quad a \in \mathbb{R}^{+}:\\
+ \implies \quad \forall \, \epsilon > 0 \quad \exists \, \overline{x}: \quad \forall x \geq \overline{x} \quad |xf(x) - a| < \epsilon\\
+ \text{Prendiamo } \epsilon = \frac{a}{2} \quad \implies \quad \exists \, \overline{x}_{\epsilon = \frac{a}{2}}\\
+ \quad \forall \, x \geq \overline{x}_{\epsilon = \frac{a}{2}} \quad xf(x) - a > -\frac{a}{2} \quad \implies \quad xf(x) > \frac{a}{2} \quad \implies \quad f(x) > \frac{a}{2x}\\
+ \text{Per la } \textbf{monotonia} \text{ dell'integrale}: \quad \lim_{t \to \infty} \int_{\overline{x}}^{t} f(x) dx > \lim_{t \to \infty} \int_{\overline{x}}^{t} \frac{a}{2x} = +\infty\\\\
+ \bullet \quad a = +\infty:\\
+ \implies \quad \forall \, M > 0 \quad \exists \, \overline{x}: \quad \forall x \geq \overline{x} \quad xf(x) \geq M \quad\implies \quad f(x) \geq \frac{M}{x}\\
+ \implies \quad \text{(per } \textbf{monotonia} \text{)} \quad \lim_{t \to \infty} \int_{\overline{x}}^{t} f(x) dx \geq \lim_{t \to \infty} \int_{\overline{x}}^{t} \frac{M}{x} = +\infty\\\\
+ \text{In entrambi i casi} \quad \int_{0}^{\infty} f(x) dx \quad \textbf{diverge} \text{, che è } \textbf{assurdo} \text{ per ipotesi}
+\end{gather*}
+\fi
+
+{\bf 2.1)}
+\begin{gather*}
+ \int_{0}^{\infty} f(x)dx < \infty\\
+ \implies \lim_{x \to \infty} (x-1) \int_{x-1}^{x} f(t)dt = 0\\\\
+ \text{Supponiamo per } \textbf{assurdo} \text{ che } \lim_{x \to \infty} (x-1) \int_{x-1}^{x} f(t)dt \neq 0\\
+ \implies \quad \exists \, \epsilon > 0: \quad \forall \, \overline{x} \quad \exists \, x \geq \overline{x}: \quad (x-1) \int_{x-1}^{x} f(t)dt \geq \epsilon \quad \implies \quad \int_{x-1}^{x} f(t)dt \geq \frac{\epsilon}{x-1}\\
+ \text{Esistono } \textbf{infiniti} \text{ valori di } x \text{ in cui la relazione sopra risulta valida. Chiamiamo } x_1, x_2, ..., x_n \text{ questi valori}\\
+ \implies \int_{0}^{\infty} f(x)dx > \int_{0}^{\infty} f(x)dx - \sum_{i = 1}^{\infty} \int_{x_i-1}^{x_i} f(t)dt + \sum_{i = 1}^{\infty} \frac{\epsilon}{x_i-1} = \infty\\
+ \text{Ma per ipotesi } \int_{0}^{\infty} f(x)dx < \infty \quad \implies \quad \text{abbiamo ottenuto una } \textbf{contraddizione}
+\end{gather*}
+
+\newpage
+
+\centerline{\bf APPENDICE }
+
+{\bf 3)}
+\begin{gather*}
+ \lim_{n \to \infty} n^2 \sin\left(\frac{1}{n}\right) = +\infty\\\\
+ \iffalse \text{Osserviamo che} \quad \lim_{x \to 0} \frac{\sin(x)}{x} = 1\\
+ \text{quindi} \quad \forall \, \epsilon > 0 \quad \exists \, \overline{n}: \quad \forall \, \frac{1}{n} \leq \overline{n} \quad \left|\frac{\sin(\frac{1}{n})}{\frac{1}{n}} - 1\right| < \epsilon\\
+ \implies \quad 1 - \epsilon < \frac{\sin(\frac{1}{n})}{\frac{1}{n}} < 1 + \epsilon\\
+ \text{Consideriamo la parte } \textbf{sinistra} \text{ della doppia disuguaglianza, e prendiamo } \epsilon = \frac{1}{2}\\
+ \implies \quad \frac{\sin(\frac{1}{n})}{\frac{1}{n}} > \frac{1}{2} \quad \text{per} \quad \frac{1}{n} \leq \overline{n}_{\epsilon = \frac{1}{2}} \quad \left(\text{quindi per } n \geq \frac{1}{\overline{n}_{\epsilon = \frac{1}{2}}} \right)\\
+ \frac{\sin(\frac{1}{n})}{\frac{1}{n}} = n\sin\left(\frac{1}{n}\right) \quad \implies \quad n^2\sin\left(\frac{1}{n}\right) > \frac{n}{2} \quad \text{per} \quad n \geq \frac{1}{\overline{n}_{\epsilon = \frac{1}{2}}}\\\\\\
+ \text{Supponiamo per } \textbf{assurdo} \text{ che} \quad L = \lim_{n \to \infty} n^2\sin\left(\frac{1}{n}\right) \quad (L \in \mathbb{R})\\
+ \text{Per quanto osservato sopra avremo che} \quad n^2\sin\left(\frac{1}{n}\right) > L \quad \forall \, n \geq \max\left(2L, \frac{1}{\overline{n}_{\epsilon = \frac{1}{2}}}\right)\\
+ \text{Quindi la successione} \quad n^2\sin\left(\frac{1}{n}\right) \quad \textbf{diverge}\\
+ \text{-----------------------------------------------------------------------------}\\
+ \fi
+ \lim_{n \to \infty} n^2 \sin(\frac{1}{n}) \quad \stackrel{\mathclap{\tiny\mbox{\boldmath$t = \frac{1}{n}$}}}{=} \quad \lim_{t \to 0} \frac{\sin(t)}{t^2}\\
+ \frac{\sin(t)}{t^2} \quad \stackrel{\mathclap{\tiny\mbox{\boldmath$t \to 0$}}}{\sim} \quad \frac{t}{t^2} = \frac{1}{t}\\
+ \lim_{t \to 0} \frac{1}{t} = +\infty \quad \implies \quad \lim_{n \to \infty} n^2 \sin(\frac{1}{n}) = +\infty
+\end{gather*}
+
+\end{document}
