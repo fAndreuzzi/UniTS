@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Queue;
+import java.util.PriorityQueue;
 
 public class ForzaN {
 
@@ -11,7 +13,16 @@ public class ForzaN {
     System.out.println("Forza ... ");
     int winN = s.nextInt();
 
-    char[] markers = {'*', '+', '#'};
+    Queue<Character> q = new PriorityQueue<Character>();
+    while(true) {
+      char mark = s.next().charAt(0);
+      if(mark == '0') break;
+      q.add(mark);
+    }
+
+    char[] markers = new char[q.size()];
+    for(int count = 0; count < markers.length; count++) markers[count] = q.poll();
+
     Scacchiera table = new Scacchiera(n, markers, winN);
 
     int turn = 0;
@@ -213,32 +224,42 @@ public class ForzaN {
     public String toString() {
       StringBuilder builder = new StringBuilder();
 
-      builder.append("   ");
+      int longestLabel = labelLength(table.length - 1);
+
+      builder.append("  " + repeat(" ", longestLabel));
       for(int i = 0; i < table.length; i++) {
-        builder.append(' ').append(i).append(' ');
+        builder.append(' ').append(repeat(" ", longestLabel - labelLength(i))).append(i).append(' ');
       }
       builder.append('\n');
-      builder.append("   ");
+      builder.append("  " + repeat(" ", longestLabel));
       for(int i = 0; i < table.length; i++) {
-        builder.append("---");
+        builder.append("--" + repeat("-", longestLabel));
       }
       builder.append('\n');
 
       for(int row = 0; row < table.length; row++) {
-        builder.append(row).append(' ').append('|');
+        builder.append(row).append(repeat(" ", longestLabel - labelLength(row))).append(' ').append('|');
         for(int col = 0; col < table.length; col++) {
           int id = table[row][col];
-          builder.append(' ').append(id == -1 ? ' ' : markers[id]).append(' ');
+          builder.append(' ').append(repeat(" ", longestLabel - 1)).append(id == -1 ? '.' : markers[id]).append(' ');
         }
         builder.append('|').append('\n');
       }
 
-      builder.append("   ");
+      builder.append("  " + repeat(" ", longestLabel));
       for(int i = 0; i < table.length; i++) {
-        builder.append("---");
+        builder.append("--" + repeat("-", longestLabel));
       }
 
       return builder.toString();
+    }
+
+    public String repeat(String s, int count) {
+      return count > 0 ? s + repeat(s, --count) : "";
+    }
+
+    public int labelLength(int i) {
+      return (i + "").length();
     }
   }
 }
