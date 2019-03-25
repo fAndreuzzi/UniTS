@@ -11,7 +11,7 @@ public class ForzaN {
     System.out.println("Forza ... ");
     int winN = s.nextInt();
 
-    char[] markers = {'*', '+'};
+    char[] markers = {'*', '+', '#'};
     Scacchiera table = new Scacchiera(n, markers, winN);
 
     int turn = 0;
@@ -93,7 +93,7 @@ public class ForzaN {
         if(table[i][col] != id) {
           id = table[i][col];
           count = 1;
-        } else {
+        } else if(id != -1) {
           count++;
           if(count >= winN) return id;
         }
@@ -110,7 +110,7 @@ public class ForzaN {
         if(table[row][i] != id) {
           id = table[row][i];
           count = 1;
-        } else {
+        } else if(id != -1) {
           count++;
           if(count >= winN) return id;
         }
