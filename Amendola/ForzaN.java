@@ -1,19 +1,21 @@
 import java.util.Scanner;
 import java.util.Queue;
-import java.util.PriorityQueue;
+import java.util.ArrayDeque;
+import java.util.Arrays;
 
 public class ForzaN {
 
   public static void main(String[] args){
     Scanner s = new Scanner(System.in);
 
-    System.out.println("Dimensione scacchiera: ");
+    System.out.println("Dimensione scacchiera... ");
     int n = s.nextInt();
 
-    System.out.println("Forza ... ");
+    System.out.println("Forza... ");
     int winN = s.nextInt();
 
-    Queue<Character> q = new PriorityQueue<Character>();
+    System.out.println("Inserire un segnalino per ogni giocatore... ");
+    Queue<Character> q = new ArrayDeque<Character>();
     while(true) {
       char mark = s.next().charAt(0);
       if(mark == '0') break;
