@@ -9,6 +9,9 @@
 \usepackage{mathtools}
 \usepackage{makecell}
 \usepackage{xcolor}
+\usepackage{multicol}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
 
 \definecolor{_red}{RGB}      {252,192,194}
 \definecolor{_blue}{RGB}     {190,193,247}
@@ -40,13 +43,19 @@
 \maketitle
 
 \section{Calcolo della funzione}
-Ricavo la funzione dal resto della divisione del numero di matricola per $2^{16}$:\\
-\begin{gather*}
-  500630 \quad \% \quad 65536 = 41878\\
-  41878 \implies 1010001110010110
-\end{gather*}
 
-\begin{center}
+\begin{textblock*}{10pt}(100pt,450pt)
+  \begin{gather*}
+    (500630 \mod \quad 65536) = 41878\\
+    41878_{10} = 1010001110010110_2
+  \end{gather*}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(230pt,467pt)
+  \Huge{\boldmath{$\implies$}}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(300pt,360pt)
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     \textbf{x} & \textbf{y} & \textbf{z} & \textbf{k} & \textbf{f(x,y,z,k)} \\
@@ -84,12 +93,14 @@ Ricavo la funzione dal resto della divisione del numero di matricola per $2^{16}
       1 & 1 & 1 & 1 & 0 \\
     \hline
   \end{tabular}
-\end{center}
+\end{textblock*}
+
+Ricavo la funzione dal resto della divisione del numero di matricola per $2^{16}$:\\
 
 \newpage
 
 \subsection*{Minterm}
-Riscrivo le combinazioni $(x,y,z,k)$ in cui la funzione assume il valore $1$:\\
+Riscrivo le combinazioni $(x,y,z,k)$ in cui la funzione assume valore $1$:\\
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -121,7 +132,7 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
 \end{align*}
 
 \subsection*{Maxterm}
-Riscrivo le combinazioni $(x,y,z,k)$ in cui la funzione assume il valore $0$:
+Riscrivo le combinazioni $(x,y,z,k)$ in cui la funzione assume valore $0$:
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -417,6 +428,40 @@ La funzione ottenuta è la seguente:
   &\bigspace + (x \cdot y \cdot \oline{z} \cdot k) + (x \cdot y \cdot z \cdot \oline{k})
 \end{align*}
 
+
+% labels
+\begin{textblock*}{10pt}(368pt,318pt)
+  \scalebox{0.5}{$(\oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k})$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(368pt,360pt)
+  \scalebox{0.5}{$(\oline{x} \cdot \oline{y} \cdot z \cdot \oline{k})$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(368pt,403pt)
+  \scalebox{0.5}{$(\oline{x} \cdot y \cdot z \cdot \oline{k})$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(368pt,446pt)
+  \scalebox{0.5}{$(\oline{x} \cdot y \cdot z \cdot k)$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(368pt,488pt)
+  \scalebox{0.5}{$(x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k})$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(368pt,531pt)
+  \scalebox{0.5}{$(x \cdot \oline{y} \cdot z \cdot k)$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(368pt,574pt)
+  \scalebox{0.5}{$(x \cdot y \cdot \oline{z} \cdot k)$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(368pt,617pt)
+  \scalebox{0.5}{$(x \cdot y \cdot z \cdot \oline{k})$}
+\end{textblock*}
+
 \begin{center}
   %minterm
   \begin{tikzpicture}
@@ -565,6 +610,39 @@ La funzione ottenuta è la seguente:
   \bm{f(x,y,z,k)} &= (x+y+z+\oline{k}) \cdot (x+y+\oline{z}+\oline{k}) \cdot (x+\oline{y}+z+k) \cdot (x+\oline{y}+z+\oline{k}) \cdot (\oline{x}+y+z+\oline{k}) \cdot \\
   &\bigspace \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+z+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})
 \end{align*}
+
+% labels
+\begin{textblock*}{10pt}(366pt,282pt)
+  \scalebox{0.5}{$(x + y + z + \oline{k})$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(366pt,324pt)
+  \scalebox{0.5}{$(x + y + \oline{z} + \oline{k})$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(366pt,367pt)
+  \scalebox{0.5}{$(x + \oline{y} + z + k)$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(366pt,410pt)
+  \scalebox{0.5}{$(x + \oline{y} + z + \oline{k})$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(366pt,452pt)
+  \scalebox{0.5}{$(\oline{x} + y + z + \oline{k})$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(366pt,495pt)
+  \scalebox{0.5}{$(\oline{x} + y + \oline{z} + k)$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(366pt,538pt)
+  \scalebox{0.5}{$(\oline{x} + \oline{y} + z + k)$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(366pt,581pt)
+  \scalebox{0.5}{$(\oline{x} + \oline{y} + \oline{z} + \oline{k})$}
+\end{textblock*}
 
 \begin{center}
   \begin{tikzpicture}
@@ -715,6 +793,31 @@ La funzione ottenuta è la seguente:
 \bigskip
 
 \bigskip
+
+% labels
+\begin{textblock*}{10pt}(368pt,311pt)
+  \scalebox{0.5}{$(x \cdot y \cdot \oline{z} \cdot k)$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(368pt,353pt)
+  \scalebox{0.5}{$(x \cdot \oline{y} \cdot z \cdot k)$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(371pt,398pt)
+  \scalebox{0.5}{$(\oline{y} \cdot \oline{z} \cdot \oline{k})$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(371pt,441pt)
+  \scalebox{0.5}{$(\oline{x} \cdot y \cdot z)$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(371pt,483pt)
+  \scalebox{0.5}{$(\oline{x} \cdot \cdot z \cdot \oline{k})$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(371pt,526pt)
+  \scalebox{0.5}{$(y \cdot z \cdot \oline{k})$}
+\end{textblock*}
 
 \begin{center}
   \begin{tikzpicture}
