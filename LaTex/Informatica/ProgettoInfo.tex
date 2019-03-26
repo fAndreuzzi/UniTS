@@ -383,7 +383,7 @@ Costruisco il reticolo, in modo da poter valutare quali sono gli implicanti esse
 
 \newpage
 
-Posso scegliere, per coprire il termine $2$, l'implicante C oppure l'implicante E. Scegliendo l'implicante E mi riconduco all'espressione della funzione trovata con la mappa di Karnaugh.
+Per coprire il termine $2$ posso scegliere l'implicante C oppure l'implicante E. Scegliendo l'implicante E mi riconduco all'espressione della funzione trovata con la mappa di Karnaugh.
 \begin{center}
   \begin{table}[h]
     \makegapedcells
@@ -467,13 +467,30 @@ La funzione ottenuta è la seguente:
   \scalebox{0.8}{\boldmath{$f(x,y,z,k)$}}
 \end{textblock*}
 
+% variabili negate
+\begin{textblock*}{10pt}(163pt,278pt)
+  \scalebox{0.9}{$\oline{x}$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(220pt,278pt)
+  \scalebox{0.9}{$\oline{y}$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(280pt,278pt)
+  \scalebox{0.9}{$\oline{z}$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(335pt,278pt)
+  \scalebox{0.9}{$\oline{k}$}
+\end{textblock*}
+
 \begin{center}
   %minterm
   \begin{tikzpicture}
-    \node (x0) at (0,0) {x};
-    \node (x1) at ($(x0)+(2,0)$) {y};
-    \node (x2) at ($(x1)+(2,0)$) {z};
-    \node (x3) at ($(x2)+(2,0)$) {k};
+    \node (x0) at (0,0) {$x$};
+    \node (x1) at ($(x0)+(2,0)$) {$y$};
+    \node (x2) at ($(x1)+(2,0)$) {$z$};
+    \node (x3) at ($(x2)+(2,0)$) {$k$};
 
     \node[not gate US, draw, rotate=-90] at ($(x0)+(1,-1.5)$) (Not0) {};
     \node[not gate US, draw, rotate=-90] at ($(x1)+(1,-1.5)$) (Not1) {};
@@ -654,12 +671,29 @@ La funzione ottenuta è la seguente:
   \scalebox{0.8}{\boldmath{$f(x,y,z,k)$}}
 \end{textblock*}
 
+% variabili negate
+\begin{textblock*}{10pt}(163pt,243pt)
+  \scalebox{0.9}{$\oline{x}$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(220pt,243pt)
+  \scalebox{0.9}{$\oline{y}$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(280pt,243pt)
+  \scalebox{0.9}{$\oline{z}$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(335pt,243pt)
+  \scalebox{0.9}{$\oline{k}$}
+\end{textblock*}
+
 \begin{center}
   \begin{tikzpicture}
-    \node (x0) at (0,0) {x};
-    \node (x1) at ($(x0)+(2,0)$) {y};
-    \node (x2) at ($(x1)+(2,0)$) {z};
-    \node (x3) at ($(x2)+(2,0)$) {k};
+    \node (x0) at (0,0) {$x$};
+    \node (x1) at ($(x0)+(2,0)$) {$y$};
+    \node (x2) at ($(x1)+(2,0)$) {$z$};
+    \node (x3) at ($(x2)+(2,0)$) {$k$};
 
     \node[not gate US, draw, rotate=-90] at ($(x0)+(1,-1.5)$) (Not0) {};
     \node[not gate US, draw, rotate=-90] at ($(x1)+(1,-1.5)$) (Not1) {};
@@ -834,12 +868,29 @@ La funzione ottenuta è la seguente:
   \scalebox{0.8}{\boldmath{$f(x,y,z,k)$}}
 \end{textblock*}
 
+% variabili negate
+\begin{textblock*}{10pt}(163pt,271pt)
+  \scalebox{0.9}{$\oline{x}$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(220pt,271pt)
+  \scalebox{0.9}{$\oline{y}$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(280pt,271pt)
+  \scalebox{0.9}{$\oline{z}$}
+\end{textblock*}
+
+\begin{textblock*}{10pt}(335pt,271pt)
+  \scalebox{0.9}{$\oline{k}$}
+\end{textblock*}
+
 \begin{center}
   \begin{tikzpicture}
-    \node (x0) at (0,0) {x};
-    \node (x1) at ($(x0)+(2,0)$) {y};
-    \node (x2) at ($(x1)+(2,0)$) {z};
-    \node (x3) at ($(x2)+(2,0)$) {k};
+    \node (x0) at (0,0) {$x$};
+    \node (x1) at ($(x0)+(2,0)$) {$y$};
+    \node (x2) at ($(x1)+(2,0)$) {$z$};
+    \node (x3) at ($(x2)+(2,0)$) {$k$};
 
     \node[not gate US, draw, rotate=-90] at ($(x0)+(1,-1.5)$) (Not0) {};
     \node[not gate US, draw, rotate=-90] at ($(x1)+(1,-1.5)$) (Not1) {};
