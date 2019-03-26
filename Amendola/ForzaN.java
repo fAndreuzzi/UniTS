@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.Queue;
 import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Random;
 
 public class ForzaN {
 
@@ -31,11 +32,17 @@ public class ForzaN {
     while(true) {
       System.out.println(String.format("Giocatore %d", turn + 1));
 
-      int col = s.nextInt();
+      String input = s.nextLine();
+      while(input.length() == 0) input = s.nextLine();
 
-      while(!table.insert(turn, col)) {
-        System.out.println("La colonna è piena");
-        col = s.nextInt();
+      try {
+        while(!table.insert(turn, Integer.parseInt(input))) {
+          System.out.println("Colonna non valida");
+          input = s.nextLine();
+          while(input.length() == 0) input = s.nextLine();
+        }
+      } catch(Exception e) {
+        if(input.equals("eq")) table.generateEarthquake();
       }
 
       table.show();
@@ -58,10 +65,12 @@ public class ForzaN {
     int[][] table;
     char[] markers;
     int winN;
+    Random random;
 
     public Scacchiera(int n, char[] markers, int winN) {
       this.markers = markers;
       this.winN = winN;
+      this.random = new Random();
 
       table = new int[n][n];
       emptyInit();
@@ -76,6 +85,8 @@ public class ForzaN {
     }
 
     public int firstAvailableRow(int col) {
+      if(col < 0 || col >= table.length) return -1;
+
       int i;
       for(i = table[col].length - 1; i >= 0 && busy(i,col); i--) {}
       return i;
@@ -85,6 +96,51 @@ public class ForzaN {
       int index = firstAvailableRow(col);
       if(index != -1) table[index][col] = turn;
       return index != -1;
+    }
+
+    public void generateEarthquake() {
+      boolean[] bm = new boolean[table.length];
+      for(int i = 0; i < bm.length; i++) bm[i] = false;
+
+      for(int col = 0; col < table.length; col++) {
+        earthQuake(bm, col);
+      }
+    }
+
+    private void earthQuake(boolean[] bitmap, int column) {
+      if(bitmap[column]) return;
+      bitmap[column] = true;
+
+      int to = random.nextInt(3) - 1 + column;
+      //System.out.println(String.format("shift col %d to %d", column, to));
+      if(to < 0 || to >= table.length) reset(table, column);
+      else if(column == to) {}
+      else {
+        earthQuake(bitmap, to);
+        pushColumn(table, column, to);
+        reset(table,column);
+      }
+    }
+
+    private static void pushColumn(int[][] matrix, int from, int to) {
+      mergeColumns(matrix, getColumn(matrix, from), to);
+    }
+
+    private static int[] getColumn(int[][] matrix, int col) {
+      int[] c = new int[matrix.length];
+      for(int row = 0; row < matrix.length; row++) {
+        c[row] = matrix[row][col];
+      }
+      return c;
+    }
+
+    // sovrascrive, o lascia se serve
+    private static void mergeColumns(int[][] matrix, int[] values, int col) {
+      for(int row = 0; row < matrix.length; row++) if(values[row] != -1) matrix[row][col] = values[row];
+    }
+
+    private static void reset(int[][] matrix, int col) {
+      for(int row = 0; row < matrix.length; row++) matrix[row][col] = -1;
     }
 
     public int checkWinner() {
