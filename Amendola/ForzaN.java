@@ -116,9 +116,12 @@ public class ForzaN {
       if(to < 0 || to >= table.length) reset(table, column);
       else if(column == to) {}
       else {
+        int[] copy = getColumn(table, column);
+
         earthQuake(bitmap, to);
         pushColumn(table, column, to);
-        reset(table,column);
+
+        if(eq(getColumn(table, column), copy)) reset(table,column);
       }
     }
 
@@ -132,6 +135,11 @@ public class ForzaN {
         c[row] = matrix[row][col];
       }
       return c;
+    }
+
+    private static boolean eq(int[] c1, int[] c2) {
+      for(int i = 0; i < Math.min(c1.length, c2.length); i++) if(c1[i] != c2[i]) return false;
+      return true;
     }
 
     // sovrascrive, o lascia se serve

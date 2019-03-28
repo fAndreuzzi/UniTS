@@ -1,26 +1,36 @@
 import java.util.Stack;
+import java.util.Scanner;
 
 public class Espressione {
 
   static final boolean DEBUG = false;
 
   public static void main(String[] args) {
-    log("METODO RICORSIVO");
-    long time = System.nanoTime();
-    log("result: " + recEvaluate(args[0]).getValue());
-    long recElapsed = System.nanoTime() - time;
-    log("time: " + recElapsed + " ns");
+    Scanner s = new Scanner(System.in);
+    while(true) {
+      System.out.println("\nInserire un'espressione... ");
+      String line = s.nextLine();
+      while(line.length() == 0) line = s.nextLine();
 
-    log("\n");
+      if(line.equals("stop")) return;
 
-    log("METODO ITERATIVO");
-    time = System.nanoTime();
-    log("result: " + itEvaluate(args[0]));
-    long itElapsed = System.nanoTime() - time;
-    log("time: " + (System.nanoTime() - time) + " ns");
+      log("METODO RICORSIVO");
+      long time = System.nanoTime();
+      log("result: " + recEvaluate(line).getValue());
+      long recElapsed = System.nanoTime() - time;
+      log("time: " + recElapsed + " ns");
 
-    log("");
-    log("T(iterativo) = " + String.format("%.3f", ((double) itElapsed / (double) recElapsed)) + " * T(ricorsivo)");
+      log("\n");
+
+      log("METODO ITERATIVO");
+      time = System.nanoTime();
+      log("result: " + itEvaluate(line));
+      long itElapsed = System.nanoTime() - time;
+      log("time: " + (System.nanoTime() - time) + " ns");
+
+      log("");
+      log("T(iterativo) = " + String.format("%.3f", ((double) itElapsed / (double) recElapsed)) + " * T(ricorsivo)");
+    }
   }
 
   public static Optional itEvaluate(String s) {
