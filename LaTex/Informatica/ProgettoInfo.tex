@@ -186,8 +186,6 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
   &\overset{T9}{=} (\oline{y} \cdot \oline{z} \cdot \oline{k}) + (\oline{x} \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z) + (y \cdot z \cdot \oline{k}) + (x \cdot \oline{y} \cdot z \cdot k) + (x \cdot y \cdot \oline{z} \cdot k)
 \end{align*}
 
-\newpage
-
 \subsubsection*{Maxterm}
 \begin{align*}
   % line 1
@@ -206,7 +204,13 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
   &\overset{T9}{=} (x+y+\oline{k}) \cdot (x+z+\oline{k}) \cdot (y+z+\oline{k}) \cdot \underline{(x+\oline{y}+z+k)} \cdot (\oline{x}+y+\oline{z}+k) \cdot \underline{(\oline{x}+\oline{y}+z+k)} \cdot\\
   &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 6
-  &\overset{T9}{=} (x+y+\oline{k}) \cdot (x+z+\oline{k}) \cdot (y+z+\oline{k}) \cdot (\oline{y}+z+k) \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  &\overset{T9}{=} (x+y+\oline{k}) \cdot (x+z+\oline{k}) \cdot (y+z+\oline{k}) \cdot (\oline{y}+z+k) \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})
+\end{align*}
+
+\newpage
+
+\begin{align*}
+  \bm{f(x,y,z,k)} &= ...\\
   % line 7
   &\overset{A6}{=} [x \cdot (x+z+\oline{k}) + y \cdot (x+z+\oline{k}) + \oline{k} \cdot (x+z+\oline{k})] \cdot (y+z+\oline{k}) \cdot (\oline{y}+z+k) \cdot (\oline{x}+y+\oline{z}+k) \cdot\\
   &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
@@ -237,13 +241,7 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
   &\bigspace \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 18
   &\overset{A7}{=} (x \cdot y \cdot k + x \cdot z + x \cdot \oline{y} \cdot \oline{k} + y \cdot z \cdot k + y \cdot z + z \cdot \oline{k} + \oline{y} \cdot \oline{k}) \cdot (\oline{x}+y+\oline{z}+k) \cdot\\
-  &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})
-\end{align*}
-
-\newpage
-
-\begin{align*}
-  \bm{f(x,y,z,k)} &= ...\\
+  &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 19
   &\overset{T4}{=} (x \cdot y \cdot k + x \cdot z + x \cdot \oline{y} \cdot \oline{k} + y \cdot z + z \cdot \oline{k} + \oline{y} \cdot \oline{k}) \cdot (\oline{x}+y+\oline{z}+k) \cdot  (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 20
@@ -258,7 +256,13 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
   % line 23
   &\overset{A6}{=} [x \cdot y \cdot k \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) + x \cdot z \cdot k \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) +\\
   &\bigspace + y \cdot z \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) + \oline{x} \cdot z \cdot \oline{k} \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) + \oline{x} \cdot \oline{y} \cdot \oline{k} \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) +\\
-  &\bigspace + \oline{y} \cdot \oline{z} \cdot \oline{k} \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})]\\
+  &\bigspace + \oline{y} \cdot \oline{z} \cdot \oline{k} \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})]
+\end{align*}
+
+\newpage
+
+\begin{align*}
+  \bm{f(x,y,z,k)} &= ...\\
   % line 24
   &\overset{A7}{=} (x \cdot y \cdot \oline{z} \cdot k + x \cdot \oline{y} \cdot z \cdot k + \oline{x} \cdot y \cdot z + y \cdot z \cdot \oline{k} + \oline{x} \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot z \cdot \oline{k} + \oline{x} \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} +\\
   &\bigspace + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k})\\
