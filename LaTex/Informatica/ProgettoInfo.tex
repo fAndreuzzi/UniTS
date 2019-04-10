@@ -168,22 +168,19 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
   \bm{f(x,y,z,k)} &= \underline{(\oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k})} + (\oline{x} \cdot \oline{y} \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot k) + \underline{(x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k})} + (x \cdot \oline{y} \cdot z \cdot k) + \\
   &\bigspace + (x \cdot y \cdot \oline{z} \cdot k) + (x \cdot y \cdot z \cdot \oline{k})\\
   % line 2
-  &\overset{T9}{=} (\oline{y} \cdot \oline{z} \cdot \oline{k}) + (\oline{x} \cdot \oline{y} \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot k) + (x \cdot \oline{y} \cdot z \cdot k) + (x \cdot y \cdot \oline{z} \cdot k)\\
+  &\overset{T9}{=} \bm{(\oline{y} \cdot \oline{z} \cdot \oline{k})} + (\oline{x} \cdot \oline{y} \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot k) + (x \cdot \oline{y} \cdot z \cdot k) + (x \cdot y \cdot \oline{z} \cdot k)\\
   &\bigspace + (x \cdot y \cdot z \cdot \oline{k})\\
   % line 3
-  &\overset{T1}{=} (\oline{y} \cdot \oline{z} \cdot \oline{k}) + (\oline{x} \cdot \oline{y} \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot k) + \\
-  &\bigspace + (x \cdot \oline{y} \cdot z \cdot k) + (x \cdot y \cdot \oline{z} \cdot k) + (x \cdot y \cdot z \cdot \oline{k})\\
-  % line 4
-  &= (\oline{y} \cdot \oline{z} \cdot \oline{k}) + \underline{(\oline{x} \cdot \oline{y} \cdot z \cdot \oline{k})} + \underline{(\oline{x} \cdot y \cdot z \cdot \oline{k})} + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot k) + \\
+  &\overset{T1}{=} (\oline{y} \cdot \oline{z} \cdot \oline{k}) + \underline{(\oline{x} \cdot \oline{y} \cdot z \cdot \oline{k})} + \bm{\underline{(\oline{x} \cdot y \cdot z \cdot \oline{k})} + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot \oline{k})} + (\oline{x} \cdot y \cdot z \cdot k) + \\
   &\bigspace + (x \cdot \oline{y} \cdot z \cdot k) + (x \cdot y \cdot \oline{z} \cdot k) + (x \cdot y \cdot z \cdot \oline{k})\\
   % line 5
-  &\overset{T9}{=} (\oline{y} \cdot \oline{z} \cdot \oline{k}) + (\oline{x} \cdot z \cdot \oline{k}) + \underline{(\oline{x} \cdot y \cdot z \cdot \oline{k})} + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + \underline{(\oline{x} \cdot y \cdot z \cdot k)} + (x \cdot \oline{y} \cdot z \cdot k) + \\
+  &\overset{T9}{=} (\oline{y} \cdot \oline{z} \cdot \oline{k}) + \bm{(\oline{x} \cdot z \cdot \oline{k})} + \underline{(\oline{x} \cdot y \cdot z \cdot \oline{k})} + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + \underline{(\oline{x} \cdot y \cdot z \cdot k)} + (x \cdot \oline{y} \cdot z \cdot k) + \\
   &\bigspace + (x \cdot y \cdot \oline{z} \cdot k) + (x \cdot y \cdot z \cdot \oline{k})\\
   % line 6
-  &\overset{T9}{=} (\oline{y} \cdot \oline{z} \cdot \oline{k}) + (\oline{x} \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z) + \underline{(\oline{x} \cdot y \cdot z \cdot \oline{k})} + (x \cdot \oline{y} \cdot z \cdot k) + (x \cdot y \cdot \oline{z} \cdot k) + \\
+  &\overset{T9}{=} (\oline{y} \cdot \oline{z} \cdot \oline{k}) + (\oline{x} \cdot z \cdot \oline{k}) + \bm{(\oline{x} \cdot y \cdot z)} + \underline{(\oline{x} \cdot y \cdot z \cdot \oline{k})} + (x \cdot \oline{y} \cdot z \cdot k) + (x \cdot y \cdot \oline{z} \cdot k) + \\
   &\bigspace + \underline{(x \cdot y \cdot z \cdot \oline{k})}\\
   % line 7
-  &\overset{T9}{=} (\oline{y} \cdot \oline{z} \cdot \oline{k}) + (\oline{x} \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z) + (y \cdot z \cdot \oline{k}) + (x \cdot \oline{y} \cdot z \cdot k) + (x \cdot y \cdot \oline{z} \cdot k)
+  &\overset{T9}{=} (\oline{y} \cdot \oline{z} \cdot \oline{k}) + (\oline{x} \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z) + \bm{(y \cdot z \cdot \oline{k})} + (x \cdot \oline{y} \cdot z \cdot k) + (x \cdot y \cdot \oline{z} \cdot k)
 \end{align*}
 
 \subsubsection*{Maxterm}
@@ -192,71 +189,73 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
   \bm{f(x,y,z,k)} &= (x+y+z+\oline{k}) \cdot (x+y+\oline{z}+\oline{k}) \cdot (x+\oline{y}+z+k) \cdot (x+\oline{y}+z+\oline{k}) \cdot (\oline{x}+y+z+\oline{k}) \cdot \\
   &\bigspace \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+z+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 2
-  &\overset{T1}{=} \underline{(x+y+z+\oline{k})} \cdot (x+y+z+\oline{k}) \cdot (x+y+z+\oline{k}) \cdot \underline{(x+y+\oline{z}+\oline{k})} \cdot (x+\oline{y}+z+k) \cdot \\
+  &\overset{T1}{=} \bm{\underline{(x+y+z+\oline{k})} \cdot (x+y+z+\oline{k}) \cdot (x+y+z+\oline{k})} \cdot \underline{(x+y+\oline{z}+\oline{k})} \cdot (x+\oline{y}+z+k) \cdot \\
   &\bigspace \cdot (x+\oline{y}+z+\oline{k}) \cdot (\oline{x}+y+z+\oline{k}) \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+z+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 3
-  &\overset{T9}{=} (x+y+\oline{k}) \cdot \underline{(x+y+z+\oline{k})} \cdot (x+y+z+\oline{k}) \cdot (x+\oline{y}+z+k) \cdot \underline{(x+\oline{y}+z+\oline{k})} \cdot \\
+  &\overset{T9}{=} \bm{(x+y+\oline{k})} \cdot \underline{(x+y+z+\oline{k})} \cdot (x+y+z+\oline{k}) \cdot (x+\oline{y}+z+k) \cdot \underline{(x+\oline{y}+z+\oline{k})} \cdot \\
   &\bigspace \cdot (\oline{x}+y+z+\oline{k}) \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+z+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 4
-  &\overset{T9}{=} (x+y+\oline{k}) \cdot (x+z+\oline{k}) \cdot \underline{(x+y+z+\oline{k})} \cdot (x+\oline{y}+z+k) \cdot \underline{(\oline{x}+y+z+\oline{k})} \cdot\\
+  &\overset{T9}{=} (x+y+\oline{k}) \cdot \bm{(x+z+\oline{k})} \cdot \underline{(x+y+z+\oline{k})} \cdot (x+\oline{y}+z+k) \cdot \underline{(\oline{x}+y+z+\oline{k})} \cdot\\
   &\bigspace \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+z+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 5
-  &\overset{T9}{=} (x+y+\oline{k}) \cdot (x+z+\oline{k}) \cdot (y+z+\oline{k}) \cdot \underline{(x+\oline{y}+z+k)} \cdot (\oline{x}+y+\oline{z}+k) \cdot \underline{(\oline{x}+\oline{y}+z+k)} \cdot\\
+  &\overset{T9}{=} (x+y+\oline{k}) \cdot (x+z+\oline{k}) \cdot \bm{(y+z+\oline{k})} \cdot \underline{(x+\oline{y}+z+k)} \cdot (\oline{x}+y+\oline{z}+k) \cdot \underline{(\oline{x}+\oline{y}+z+k)} \cdot\\
   &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 6
-  &\overset{T9}{=} (x+y+\oline{k}) \cdot (x+z+\oline{k}) \cdot (y+z+\oline{k}) \cdot (\oline{y}+z+k) \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})
+  &\overset{T9}{=} \underline{(x+y+\oline{k})} \cdot \underline{(x+z+\oline{k})} \cdot (y+z+\oline{k}) \cdot \bm{(\oline{y}+z+k)} \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  % line 7
+  &\overset{A6}{=} [\bm{\underline{x \cdot (x+z+\oline{k})} + y \cdot (x+z+\oline{k}) + \underline{\oline{k} \cdot (x+z+\oline{k})}}] \cdot (y+z+\oline{k}) \cdot (\oline{y}+z+k) \cdot\\
+  &\bigspace \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})
 \end{align*}
 
 \newpage
 
 \begin{align*}
   \bm{f(x,y,z,k)} &= ...\\
-  % line 7
-  &\overset{A6}{=} [x \cdot (x+z+\oline{k}) + y \cdot (x+z+\oline{k}) + \oline{k} \cdot (x+z+\oline{k})] \cdot (y+z+\oline{k}) \cdot (\oline{y}+z+k) \cdot (\oline{x}+y+\oline{z}+k) \cdot\\
-  &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 8
-  &\overset{T8}{=} [x + y \cdot (x+z+\oline{k}) + \oline{k}] \cdot (y+z+\oline{k}) \cdot (\oline{y}+z+k) \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  &\overset{T8}{=} [\bm{x} + \underline{y \cdot (x+z+\oline{k})} + \bm{\oline{k}}] \cdot (y+z+\oline{k}) \cdot (\oline{y}+z+k) \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 9
-  &\overset{A6}{=} [x + x \cdot y + x \cdot z + x \cdot \oline{k} + \oline{k}] \cdot (y+z+\oline{k}) \cdot (\oline{y}+z+k) \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  &\overset{A6}{=} [\underline{x\vphantom{y} + }\bm{\underline{x \cdot y} + y \cdot z + \underline{y \cdot \oline{k}}}\underline{ + \oline{k}}] \cdot (y+z+\oline{k}) \cdot (\oline{y}+z+k) \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 10
-  &\overset{T4}{=} (x + y \cdot z + \oline{k}) \cdot (y+z+\oline{k}) \cdot (\oline{y}+z+k) \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  &\overset{T4}{=} (\bm{x} + y \cdot z + \bm{\oline{k}}) \cdot \underline{(y+z+\oline{k})} \cdot \underline{(\oline{y}+z+k)} \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 11
-  &\overset{A6}{=} (x + y \cdot z + \oline{k}) \cdot [y \cdot (\oline{y}+z+k) + z \cdot (\oline{y}+z+k) + \oline{k} \cdot (\oline{y}+z+k)] \cdot (\oline{x}+y+\oline{z}+k) \cdot\\
+  &\overset{A6}{=} (x + y \cdot z + \oline{k}) \cdot [\bm{y \cdot (\oline{y}+z+k) + \underline{z \cdot (\oline{y}+z+k)} + \oline{k} \cdot (\oline{y}+z+k)}] \cdot (\oline{x}+y+\oline{z}+k) \cdot\\
   &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 12
-  &\overset{T8}{=} (x + y \cdot z + \oline{k}) \cdot [y \cdot (\oline{y}+z+k) + z + \oline{k} \cdot (\oline{y}+z+k)] \cdot (\oline{x}+y+\oline{z}+k) \cdot\\
-  &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  &\overset{T8}{=} (x + y \cdot z + \oline{k}) \cdot [\underline{y \cdot (\oline{y}+z+k)} + \bm{z} + \underline{\oline{k} \cdot (\oline{y}+z+k)}] \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 13
-  &\overset{A6}{=} (x + y \cdot z + \oline{k}) \cdot [y \cdot \oline{y} + y \cdot z + y \cdot k + z + \oline{y} \cdot \oline{k} + z \cdot \oline{k} + \oline{k} \cdot k] \cdot (\oline{x}+y+\oline{z}+k) \cdot\\
+  &\overset{A6}{=} (x + y \cdot z + \oline{k}) \cdot [\bm{\underline{y \cdot \oline{y}} + y \cdot z + y \cdot k} + z + \bm{\oline{y} \cdot \oline{k} + z \cdot \oline{k} + \underline{\oline{k} \cdot k}}] \cdot (\oline{x}+y+\oline{z}+k) \cdot\\
   &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 14
-  &\overset{A7}{=} (x + y \cdot z + \oline{k}) \cdot [y \cdot z + y \cdot k + z + \oline{y} \cdot \oline{k} + z \cdot \oline{k}] \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  &\overset{A7}{=} (x + y \cdot z + \oline{k}) \cdot [\bm{0} + \underline{z + y \cdot z + z \cdot \oline{k}} + y \cdot k + \oline{y} \cdot \oline{k} + \bm{0}] \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 15
-  &\overset{T4}{=} (x + y \cdot z + \oline{k}) \cdot (y \cdot k + z + \oline{y} \cdot \oline{k}) \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  &\overset{T4}{=} \underline{(x + y \cdot z + \oline{k})} \cdot \underline{(y \cdot k + \bm{z} + \oline{y} \cdot \oline{k})} \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 16
-  &\overset{A6}{=} [x \cdot (y \cdot k + z + \oline{y} \cdot \oline{k}) + (y \cdot z) \cdot (y \cdot k + z + \oline{y} \cdot \oline{k}) + \oline{k} \cdot (y \cdot k + z + \oline{y} \cdot \oline{k})] \cdot (\oline{x}+y+\oline{z}+k) \cdot\\
-  &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  &\overset{A6}{=} [\bm{\underline{x \cdot (y \cdot k + z + \oline{y} \cdot \oline{k})} + \underline{(y \cdot z) \cdot (y \cdot k + z + \oline{y} \cdot \oline{k})} + \underline{\oline{k} \cdot (y \cdot k + z + \oline{y} \cdot \oline{k})}}] \cdot\\
+  &\bigspace \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 17
-  &\overset{A6}{=} (x \cdot y \cdot k + x \cdot z + x \cdot \oline{y} \cdot \oline{k} + y \cdot z \cdot k + y \cdot z + y \cdot z \cdot \oline{y} \cdot \oline{k} + y \cdot \oline{k} \cdot k + z \cdot \oline{k} + \oline{y} \cdot \oline{k}) \cdot\\
+  &\overset{A6}{=} (\bm{x \cdot y \cdot k + x \cdot z + x \cdot \oline{y} \cdot \oline{k} + y \cdot z \cdot k + y \cdot z + \underline{y \cdot z \cdot \oline{y} \cdot \oline{k}} + \underline{y \cdot \oline{k} \cdot k} + z \cdot \oline{k} + \oline{y} \cdot \oline{k}}) \cdot\\
   &\bigspace \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 18
-  &\overset{A7}{=} (x \cdot y \cdot k + x \cdot z + x \cdot \oline{y} \cdot \oline{k} + y \cdot z \cdot k + y \cdot z + z \cdot \oline{k} + \oline{y} \cdot \oline{k}) \cdot (\oline{x}+y+\oline{z}+k) \cdot\\
+  &\overset{A7}{=} (x \cdot y \cdot k + x \cdot z + x \cdot \oline{y} \cdot \oline{k} + \underline{y \cdot z \cdot k + y \cdot z} + \bm{0} + \bm{0} + z \cdot \oline{k} + \oline{y} \cdot \oline{k}) \cdot (\oline{x}+y+\oline{z}+k) \cdot\\
   &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 19
-  &\overset{T4}{=} (x \cdot y \cdot k + x \cdot z + x \cdot \oline{y} \cdot \oline{k} + y \cdot z + z \cdot \oline{k} + \oline{y} \cdot \oline{k}) \cdot (\oline{x}+y+\oline{z}+k) \cdot  (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  &\overset{T4}{=} \underline{(x \cdot y \cdot k + x \cdot z + x \cdot \oline{y} \cdot \oline{k} + \bm{y \cdot z} + z \cdot \oline{k} + \oline{y} \cdot \oline{k})} \cdot \underline{(\oline{x}+y+\oline{z}+k)} \cdot  (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 20
-  &\overset{A6}{=} [x \cdot y \cdot k \cdot (\oline{x}+y+\oline{z}+k) + x \cdot z \cdot (\oline{x}+y+\oline{z}+k) + x \cdot \oline{y} \cdot \oline{k} \cdot (\oline{x}+y+\oline{z}+k) +\\
-  &\bigspace + y \cdot z \cdot (\oline{x}+y+\oline{z}+k) + z \cdot \oline{k} \cdot (\oline{x}+y+\oline{z}+k) + \oline{y} \cdot \oline{k} \cdot (\oline{x}+y+\oline{z}+k)] \cdot\\
+  &\overset{A6}{=} [\bm{\underline{x \cdot y \cdot k \cdot (\oline{x}+y+\oline{z}+k)} + \underline{x \cdot z \cdot (\oline{x}+y+\oline{z}+k)} + \underline{x \cdot \oline{y} \cdot \oline{k} \cdot (\oline{x}+y+\oline{z}+k)} +}\\
+  &\bigspace \bm{+ \underline{y \cdot z \cdot (\oline{x}+y+\oline{z}+k)} + \underline{z \cdot \oline{k} \cdot (\oline{x}+y+\oline{z}+k)} + \underline{\oline{y} \cdot \oline{k} \cdot (\oline{x}+y+\oline{z}+k)}}] \cdot\\
   &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 21
-  &\overset{A6}{=} [x \cdot y \cdot k + x \cdot y \cdot \oline{z} \cdot k + x \cdot y \cdot k + x \cdot y \cdot z + x \cdot z \cdot k + x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{x} \cdot y \cdot z + y \cdot z + y \cdot z \cdot k +\\
-  &\bigspace + \oline{x} \cdot z \cdot \oline{k} + y \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k}] \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  &\overset{A6}{=} [\bm{x \cdot y \cdot k + x \cdot y \cdot \oline{z} \cdot k + x \cdot y \cdot k + x \cdot y \cdot z + x \cdot z \cdot k + x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{x} \cdot y \cdot z + y \cdot z +}\\
+  &\bigspace \bm{+ y \cdot z \cdot k + \oline{x} \cdot z \cdot \oline{k} + y \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k}}] \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  % line 21.5
+  &\overset{A4}{=} [\underline{x \cdot y \cdot k + x \cdot y \cdot \oline{z} \cdot k + x \cdot y \cdot k} + x \cdot z \cdot k + \underline{y \cdot z + x \cdot y \cdot z + y \cdot z \cdot k + \oline{x} \cdot y \cdot z + y \cdot z \cdot \oline{k}} +\\
+  &\bigspace + \underline{\oline{y} \cdot \oline{z} \cdot \oline{k} + x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k}} + \oline{x} \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k}] \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 22
-  &\overset{T4}{=} (x \cdot y \cdot k + x \cdot z \cdot k + y \cdot z + \oline{x} \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k}) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
+  &\overset{T4}{=} \underline{(\bm{x \cdot y \cdot k} + x \cdot z \cdot k + \bm{y \cdot z} + \oline{x} \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \bm{\oline{y} \cdot \oline{z} \cdot \oline{k}})} \cdot \underline{(\oline{x}+\oline{y}+\oline{z}+\oline{k})}\\
   % line 23
-  &\overset{A6}{=} [x \cdot y \cdot k \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) + x \cdot z \cdot k \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) +\\
-  &\bigspace + y \cdot z \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) + \oline{x} \cdot z \cdot \oline{k} \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) + \oline{x} \cdot \oline{y} \cdot \oline{k} \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) +\\
-  &\bigspace + \oline{y} \cdot \oline{z} \cdot \oline{k} \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})]
+  &\overset{A6}{=} [\bm{x \cdot y \cdot k \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) + x \cdot z \cdot k \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) + y \cdot z \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) +}\\
+  &\bigspace \bm{+ \oline{x} \cdot z \cdot \oline{k} \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) + \oline{x} \cdot \oline{y} \cdot \oline{k} \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k}) +}\\
+  &\bigspace \bm{+ \oline{y} \cdot \oline{z} \cdot \oline{k} \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})}]
 \end{align*}
 
 \newpage
@@ -264,10 +263,11 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
 \begin{align*}
   \bm{f(x,y,z,k)} &= ...\\
   % line 24
-  &\overset{A7}{=} (x \cdot y \cdot \oline{z} \cdot k + x \cdot \oline{y} \cdot z \cdot k + \oline{x} \cdot y \cdot z + y \cdot z \cdot \oline{k} + \oline{x} \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot z \cdot \oline{k} + \oline{x} \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} +\\
-  &\bigspace + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k})\\
+  &\overset{A6}{=} (\bm{x \cdot y \cdot \oline{z} \cdot k + x \cdot \oline{y} \cdot z \cdot k + \oline{x} \cdot y \cdot z + y \cdot z \cdot \oline{k} + \underline{\oline{x} \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot z \cdot \oline{k} + \oline{x} \cdot z \cdot \oline{k}} +}\\
+  &\bigspace \bm{\underline{+ \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k}} + \underline{\oline{y} \cdot \oline{z} \cdot \oline{k} +}}\\
+  &\bigspace \bm{\underline{+ \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k}}})\\
   % line 25
-  &\overset{T4}{=} (x \cdot y \cdot \oline{z} \cdot k + x \cdot \oline{y} \cdot z \cdot k + \oline{x} \cdot y \cdot z + y \cdot z \cdot \oline{k} + \oline{x} \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k})\\
+  &\overset{T4}{=} (x \cdot y \cdot \oline{z} \cdot k + x \cdot \oline{y} \cdot z \cdot k + \oline{x} \cdot y \cdot z + y \cdot z \cdot \oline{k} + \bm{\oline{x} \cdot z \cdot \oline{k}} + \bm{\oline{x} \cdot \oline{y} \cdot \oline{k}} + \bm{\oline{y} \cdot \oline{z} \cdot \oline{k}})\\
   % line 26
   &\overset{T9}{=} (x \cdot y \cdot \oline{z} \cdot k + x \cdot \oline{y} \cdot z \cdot k + \oline{x} \cdot y \cdot z \cdot k + \oline{x} \cdot y \cdot z \cdot \oline{k} + x \cdot y \cdot z \cdot \oline{k} + \oline{x} \cdot y \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot z \cdot \oline{k} +\\
   &\bigspace + \oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k})\\
