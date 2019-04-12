@@ -5,6 +5,7 @@
 \usepackage{tikz}
 \usepackage{bm}
 \usepackage{mathtools}
+\usepackage[bottom,norule]{footmisc}
 \usepackage{makecell}
 \usepackage{xcolor}
 \usepackage[absolute,overlay]{textpos}
@@ -168,7 +169,7 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
   \bm{f(x,y,z,k)} &= \underline{(\oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k})} + (\oline{x} \cdot \oline{y} \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot k) + \underline{(x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k})} + (x \cdot \oline{y} \cdot z \cdot k) + \\
   &\bigspace + (x \cdot y \cdot \oline{z} \cdot k) + (x \cdot y \cdot z \cdot \oline{k})\\
   % line 2
-  &\overset{T9}{=} \bm{(\oline{y} \cdot \oline{z} \cdot \oline{k})} + (\oline{x} \cdot \oline{y} \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot k) + (x \cdot \oline{y} \cdot z \cdot k) + (x \cdot y \cdot \oline{z} \cdot k)\\
+  &\overset{T9}{=} \bm{(\oline{y} \cdot \oline{z} \cdot \oline{k})} + (\oline{x} \cdot \oline{y} \cdot z \cdot \oline{k}) + \underline{(\oline{x} \cdot y \cdot z \cdot \oline{k})} + (\oline{x} \cdot y \cdot z \cdot k) + (x \cdot \oline{y} \cdot z \cdot k) + (x \cdot y \cdot \oline{z} \cdot k)\\
   &\bigspace + (x \cdot y \cdot z \cdot \oline{k})\\
   % line 3
   &\overset{T1}{=} (\oline{y} \cdot \oline{z} \cdot \oline{k}) + \underline{(\oline{x} \cdot \oline{y} \cdot z \cdot \oline{k})} + \bm{\underline{(\oline{x} \cdot y \cdot z \cdot \oline{k})} + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot \oline{k})} + (\oline{x} \cdot y \cdot z \cdot k) + \\
@@ -186,7 +187,7 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
 \subsubsection*{Maxterm}
 \begin{align*}
   % line 1
-  \bm{f(x,y,z,k)} &= (x+y+z+\oline{k}) \cdot (x+y+\oline{z}+\oline{k}) \cdot (x+\oline{y}+z+k) \cdot (x+\oline{y}+z+\oline{k}) \cdot (\oline{x}+y+z+\oline{k}) \cdot \\
+  \bm{f(x,y,z,k)} &= \underline{(x+y+z+\oline{k}}) \cdot (x+y+\oline{z}+\oline{k}) \cdot (x+\oline{y}+z+k) \cdot (x+\oline{y}+z+\oline{k}) \cdot (\oline{x}+y+z+\oline{k}) \cdot \\
   &\bigspace \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+z+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 2
   &\overset{T1}{=} \bm{\underline{(x+y+z+\oline{k})} \cdot (x+y+z+\oline{k}) \cdot (x+y+z+\oline{k})} \cdot \underline{(x+y+\oline{z}+\oline{k})} \cdot (x+\oline{y}+z+k) \cdot \\
@@ -245,7 +246,7 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
   &\bigspace \bm{+ \underline{y \cdot z \cdot (\oline{x}+y+\oline{z}+k)} + \underline{z \cdot \oline{k} \cdot (\oline{x}+y+\oline{z}+k)} + \underline{\oline{y} \cdot \oline{k} \cdot (\oline{x}+y+\oline{z}+k)}}] \cdot\\
   &\bigspace \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 21
-  &\overset{A6}{=} [\bm{x \cdot y \cdot k + x \cdot y \cdot \oline{z} \cdot k + x \cdot y \cdot k + x \cdot y \cdot z + x \cdot z \cdot k + x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{x} \cdot y \cdot z + y \cdot z +}\\
+  \footnotemark[1]&\overset{A6}{=} [\bm{x \cdot y \cdot k + x \cdot y \cdot \oline{z} \cdot k + x \cdot y \cdot k + x \cdot y \cdot z + x \cdot z \cdot k + x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{x} \cdot y \cdot z + y \cdot z +}\\
   &\bigspace \bm{+ y \cdot z \cdot k + \oline{x} \cdot z \cdot \oline{k} + y \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k}}] \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})\\
   % line 21.5
   &\overset{A4}{=} [\underline{x \cdot y \cdot k + x \cdot y \cdot \oline{z} \cdot k + x \cdot y \cdot k} + x \cdot z \cdot k + \underline{y \cdot z + x \cdot y \cdot z + y \cdot z \cdot k + \oline{x} \cdot y \cdot z + y \cdot z \cdot \oline{k}} +\\
@@ -263,7 +264,7 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
 \begin{align*}
   \bm{f(x,y,z,k)} &= ...\\
   % line 24
-  &\overset{A6}{=} (\bm{x \cdot y \cdot \oline{z} \cdot k + x \cdot \oline{y} \cdot z \cdot k + \oline{x} \cdot y \cdot z + y \cdot z \cdot \oline{k} + \underline{\oline{x} \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot z \cdot \oline{k} + \oline{x} \cdot z \cdot \oline{k}} +}\\
+  \footnotemark[1]&\overset{A6}{=} (\bm{x \cdot y \cdot \oline{z} \cdot k + x \cdot \oline{y} \cdot z \cdot k + \oline{x} \cdot y \cdot z + y \cdot z \cdot \oline{k} + \underline{\oline{x} \cdot z \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot z \cdot \oline{k} + \oline{x} \cdot z \cdot \oline{k}} +}\\
   &\bigspace \bm{\underline{+ \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k}} + \underline{\oline{y} \cdot \oline{z} \cdot \oline{k} +}}\\
   &\bigspace \bm{\underline{+ \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{y} \cdot \oline{z} \cdot \oline{k}}})\\
   % line 25
@@ -279,9 +280,10 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
   &\bigspace + x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k})\\
   % line 28
   &\overset{A4}{=} (\oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot z \cdot \oline{k} + \oline{x} \cdot y \cdot z \cdot \oline{k} + \oline{x} \cdot y \cdot z \cdot k + x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + x \cdot \oline{y} \cdot z \cdot k + x \cdot y \cdot \oline{z} \cdot k +\\
-  &\bigspace + x \cdot y \cdot z \cdot \oline{k})\\
+  &\bigspace + x \cdot y \cdot z \cdot \oline{k})\footnotemark[2]\\
+  &\scalebox{0.7}{1. Sono state omesse le combinazioni che si annullano per l'assioma $A7$}\\
+  &\scalebox{0.7}{2. La semplificazione può procedere come si è già mostrato sopra per i minterm}
 \end{align*}
-Mi sono ricondotto all'espressione dei minterm non semplificata. La semplificazione può procedere come si è già mostrato sopra.
 
 \subsection*{Mappa di Karnaugh}
 
