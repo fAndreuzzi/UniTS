@@ -10,20 +10,6 @@
 \usepackage{xcolor}
 \usepackage[absolute,overlay]{textpos}
 
-\definecolor{_red}{RGB}      {252,192,194}
-\definecolor{_blue}{RGB}     {190,193,247}
-\definecolor{_lightBlue}{RGB}{191,230,244}
-\definecolor{_green}{RGB}    {190,251,191}
-\definecolor{_yellow}{RGB}   {253,252,183}
-\definecolor{_purple}{RGB}   {245,195,222}
-
-\newcommand{\highlightred}[1]{\colorbox   {_red}{$\displaystyle#1$}}
-\newcommand{\highlightblue}[1]{\colorbox  {_blue}{$\displaystyle#1$}}
-\newcommand{\highlightlblue}[1]{\colorbox {_lightBlue}{$\displaystyle#1$}}
-\newcommand{\highlightpurple}[1]{\colorbox{_purple}{$\displaystyle#1$}}
-\newcommand{\highlightyellow}[1]{\colorbox{_yellow}{$\displaystyle#1$}}
-\newcommand{\highlightgreen}[1]{\colorbox {_green}{$\displaystyle#1$}}
-
 \setcellgapes{1.5pt}
 
 \usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
@@ -288,22 +274,84 @@ La funzione $f(x,y,z,k)$ si può esprimere come prodotto di somme nel seguente m
 
 \subsection*{Mappa di Karnaugh}
 
-\begin{center}
-  \begin{karnaugh-map}[4][4][1][x y][z k]
-    \manualterms{1,0,1,0,0,0,0,1,1,1,0,1,0,1,1,0}
-    \implicantedge{0}{0}{2}{2}
-    \implicant{7}{7}
-    \implicant{14}{14}
-    \implicant{13}{9}
-    \implicant{8}{9}
-    \implicant{9}{11}
-  \end{karnaugh-map}
-\end{center}
+\begin{table}[!htb]
+  \vspace{-2em}
+  \begin{minipage}{.5\linewidth}
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      \textbf{x} & \textbf{y} & \textbf{z} & \textbf{k} & \textbf{f(x,y,z,k)} \\
+      \hline
+        0 & 0 & 0 & 0 & 1 \\
+      \hline
+        0 & 0 & 1 & 0 & 1 \\
+      \hline
+        0 & 1 & 1 & 0 & 1 \\
+      \hline
+        0 & 1 & 1 & 1 & 1 \\
+      \hline
+        1 & 0 & 0 & 0 & 1 \\
+      \hline
+        1 & 0 & 1 & 1 & 1 \\
+      \hline
+        1 & 1 & 0 & 1 & 1 \\
+      \hline
+        1 & 1 & 1 & 0 & 1 \\
+      \hline
+    \end{tabular}
+  \end{minipage}
+  \begin{minipage}{.5\linewidth}
+    \centering
+    \begin{karnaugh-map}*[4][4][1][][\phantom{z} \phantom{k}]
+      \manualterms{1,0,1,0,0,0,0,1,1,1,0,1,0,1,1,0}
+      \implicantedge{0}{0}{2}{2}
+      \implicant{7}{7}
+      \implicant{14}{14}
+      \implicant{13}{9}
+      \implicant{8}{9}
+      \implicant{9}{11}
+    \end{karnaugh-map}
+  \end{minipage}
+\end{table}
 
-La funzione ottenuta è la seguente:
-\begin{align*}
-  \bm{f(x,y,z,k)} = \highlightred{(\oline{y} \cdot \oline{z} \cdot \oline{k})} + \highlightgreen{(x \cdot y \cdot \oline{z} \cdot k)} + \highlightyellow{(x \cdot \oline{y} \cdot z \cdot k)} + \highlightlblue{(\oline{x} \cdot y \cdot z)} + \highlightblue{(\oline{x} \cdot z \cdot \oline{k})} + \highlightpurple{(y \cdot z \cdot \oline{k})}
-\end{align*}
+\tikz[overlay,remember picture] {
+  \draw[->] (11,5.5) -- (12,5.9);
+  \draw[->] (11,3.5) -- (12,3.77);
+  \draw[->] (10,4.5) -- (12,5.2);
+  \draw[->] (10,2.5) -- (12,3);
+  \draw[->] (9,3.5) -- (12,4.5);
+  \draw[->] (8,2.5) -- (12,3.5);
+
+  \draw[dashed,->] (11,5.5) -- (2.2,0.05);
+  \draw[dashed,->] (11,3.5) -- (6.5,0.05);
+  \draw[dashed,->] (10,4.5) -- (4.2,0.05);
+  \draw[dashed,->] (10,2.5) -- (12,0.05);
+  \draw[dashed,->] (9,3.5) -- (8.4,0.05);
+  \draw[dashed,->] (8,2.5) -- (10.2,0.05);
+
+  \node[draw,circle,inner sep=1pt,fill] at (11,5.5) {};
+  \node[draw,circle,inner sep=1pt,fill] at (11,3.5) {};
+  \node[draw,circle,inner sep=1pt,fill] at (10,4.5) {};
+  \node[draw,circle,inner sep=1pt,fill] at (10,2.5) {};
+  \node[draw,circle,inner sep=1pt,fill] at (9,3.5) {};
+  \node[draw,circle,inner sep=1pt,fill] at (8,2.5) {};
+
+  \node at (13.75,5.9)   {\scriptsize $\oline{x}\oline{y}\oline{z}\oline{k}+x\oline{y}\oline{z}\oline{k}=(x+\oline{x})\oline{y}\oline{z}\oline{k}$};
+  \node at (12.4,5.3) {\scriptsize $xy\oline{z}k$};
+  \node at (13.75,4.6)   {\scriptsize $\oline{x}yzk+\oline{x}yz\oline{k}=\oline{x}yz(k+\oline{k})$};
+  \node at (12.4,3.9)   {\scriptsize $x\oline{y}zk$};
+  \node at (13.75,3.55) {\scriptsize $\oline{x}\oline{y}z\oline{k}+\oline{x}yz\oline{k}=\oline{x}z\oline{k}(\oline{y}+y)$};
+  \node at (13.75,3.05) {\scriptsize $xyz\oline{k}+\oline{x}yz\oline{k}=(x+\oline{x})yz\oline{k}$};
+
+  \draw[-] (7.18,6.04) -- (6.3,6.75);
+  \node at (7,6.5) {$xy$};
+  \node at (6.7,6.2) {$zk$};
+}
+
+\begin{textblock*}{10pt}(100pt,655pt)
+  \begin{align*}
+    \implies \bm{f(x,y,z,k)} = (\oline{y} \cdot \oline{z} \cdot \oline{k}) + (x \cdot y \cdot \oline{z} \cdot k) + (x \cdot \oline{y} \cdot z \cdot k) + (\oline{x} \cdot y \cdot z) + (\oline{x} \cdot z \cdot \oline{k}) + (y \cdot z \cdot \oline{k})
+  \end{align*}
+\end{textblock*}
 
 \newpage
 
