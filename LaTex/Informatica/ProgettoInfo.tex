@@ -92,12 +92,12 @@
   \end{tabular}
 \end{textblock*}
 
-Ricavo la funzione dal resto della divisione del numero di matricola per $2^{16}$:\\
+Ricavo i valori assunti dalla funzione $f(x,y,z,k)$ dal resto della divisione del numero di matricola ($0500630$) per $2^{16}$:\\
 
 \newpage
 
 \subsection*{Minterm}
-Riscrivo le combinazioni $(x,y,z,k)$ in cui la funzione assume valore $1$:\\
+Per ottenere la prima forma canonica della funzione, riscrivo le combinazioni $(x,y,z,k)$ in cui la funzione assume valore $1$:\\
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -121,7 +121,7 @@ Riscrivo le combinazioni $(x,y,z,k)$ in cui la funzione assume valore $1$:\\
     \hline
   \end{tabular}
 \end{center}
-La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
+La funzione $f(x,y,z,k)$ si può esprimere come somma di prodotti nel seguente modo:
 \begin{align*}
   \bm{f(x,y,z,k)} = (\oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k}) + (\oline{x} \cdot \oline{y}\cdot z \cdot \oline{k})
       + (\oline{x} \cdot y \cdot z \cdot \oline{k}) + (\oline{x} \cdot y \cdot z \cdot k) + (x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k})
@@ -129,7 +129,7 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
 \end{align*}
 
 \subsection*{Maxterm}
-Riscrivo le combinazioni $(x,y,z,k)$ in cui la funzione assume valore $0$:
+Per ottenere la seconda forma canonica della funzione, riscrivo le combinazioni $(x,y,z,k)$ in cui la funzione assume valore $0$:
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -153,7 +153,7 @@ Riscrivo le combinazioni $(x,y,z,k)$ in cui la funzione assume valore $0$:
     \hline
   \end{tabular}
 \end{center}
-La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
+La funzione $f(x,y,z,k)$ si può esprimere come prodotto di somme nel seguente modo:
 \begin{align*}
   \bm{f(x,y,z,k)} = (x+y+z+\oline{k}) \cdot (x+y+\oline{z}+\oline{k}) \cdot (x+\oline{y}+z+k) \cdot (x+\oline{y}+z+\oline{k}) \cdot (\oline{x}+y+z+\oline{k}) \cdot\\
   \cdot (\oline{x}+y+\oline{z}+k) \cdot (\oline{x}+\oline{y}+z+k) \cdot (\oline{x}+\oline{y}+\oline{z}+\oline{k})
@@ -280,9 +280,10 @@ La funzione $f(x,y,z,k)$ quindi si può esprimere nel seguente modo:
   &\bigspace + x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k})\\
   % line 28
   &\overset{A4}{=} (\oline{x} \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + \oline{x} \cdot \oline{y} \cdot z \cdot \oline{k} + \oline{x} \cdot y \cdot z \cdot \oline{k} + \oline{x} \cdot y \cdot z \cdot k + x \cdot \oline{y} \cdot \oline{z} \cdot \oline{k} + x \cdot \oline{y} \cdot z \cdot k + x \cdot y \cdot \oline{z} \cdot k +\\
-  &\bigspace + x \cdot y \cdot z \cdot \oline{k})\footnotemark[2]\\
+  &\bigspace + x \cdot y \cdot z \cdot \oline{k})\\
+  &= ...\footnotemark[2]\\
   &\scalebox{0.7}{1. Sono state omesse le combinazioni che si annullano per l'assioma $A7$}\\
-  &\scalebox{0.7}{2. La semplificazione può procedere come si è già mostrato sopra per i minterm}
+  &\scalebox{0.7}{2. La semplificazione può procedere come si è fatto sopra per i minterm}
 \end{align*}
 
 \subsection*{Mappa di Karnaugh}

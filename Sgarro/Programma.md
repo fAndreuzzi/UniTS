@@ -1,0 +1,104 @@
+## Algoritmi e Strutture dati (Andrea Sgarro)
+
+- 04/03/19
+  - Definizione di *algoritmo*. Definizione di *pseudo-codice*
+  - **bubble-sort**
+- 05/03/19
+  - **euclide**
+      - correttezza
+      - complessità
+- 07/03/19
+  - *Knapsack problem*
+      - algoritmo greedy approssimato
+- 08/03/19
+  - *Big-O*, o *notazione di Landau*
+      - la classe 𝚯 è una *classe di equivalenza*
+  - Definizione di *ordine di infinito*
+- 12/03/19
+  - **insertion-sort**
+    - complessità
+  - **euclide** (ricorsivo)
+- 13/03/19
+  - **merge-sort**
+    - **merge** (subroutine)
+    - relazione ricorsiva per la complessità
+- 14/03/19
+  - *Master Theorem* (in italiano *Teorema maestro/guida*)
+    - calcolo della complesità di **MergeSort**
+  - Definizione di *grafo*. Definizione di *heap*
+- 18/03/19
+  - **heap-sort**
+    - **heapify** (subroutine)
+    - **build-heap** (subroutine)
+    - complessità
+- 19/03/19
+  - **quick-sort**
+    - **partition** (subroutine)
+
+[...] Probabilità [...]
+
+- 25/03/19
+  - **quick-sort**
+    - caso peggiore
+  - **randomized-quick-sort**
+    - complessità
+      - convergenza della serie armonica
+- 26/03/19
+  - **counting-sort**
+    - complessità
+  - 𝚯(log (n!)) = 𝚯(n log n)
+    - approssimazione di Stirling
+- 28/03/19
+  - lower bound per un algoritmo di ordinamento per confronti
+  - strutture dati
+    - *stack*
+    - *queue*
+    - *linked list* (in italiano *liste ad accesso sequenziale*)
+    - *array*
+- 29/03/19
+  - **bucket-sort**
+    - complessità
+- 01/04/19
+  - *grafi*
+    - *Hand-Shake Theorem*
+    - *Principio della piccionaia*
+    - Definizione di *grafo euleriano*. Definizione di *grafo hamiltoniano*
+- 02/04/19
+  - rappresentazione dei grafi
+    - liste di adiacenza
+    - matrice di adiacenza
+  - **BFS**, *Breadth-First-Search* (in italiano *visita in ampiezza*)
+    - complessità
+- 04/04/19
+  - **DFS**, *Depth-First-Search* (in italiano *visita in profondità*)
+    - **dfs-visit** (subroutine)
+    - complessità
+- 05/04/19
+  - Definizione di *DAG* (*Directed A-cycled Graph*)
+  - **topological-sort**
+  - **dijkstra**
+    - codice "brutto"
+    - nelle ipotesi in cui l'algoritmo funziona, la distanza di Dijkstra è una metrica
+- 09/04/19
+  - Definizione di *priority queue*
+    - creazione di una *priority queue* con una *min-heap*
+  - **dijkstra**
+    - **relax** (subroutine)
+    - correttezza
+    - complessità
+- 11/04/19
+  - Definizione e funzionamento di *linear shift register* (in italiano *registro a scorrimento lineare*)
+- 12/04/19
+  - classi P, NP, NPC, NP-Hard
+  - procedimento per dimostrare che un problema è NPC
+  - tipologie di algoritmi per risolvere problemi NPC
+    - *parziali*
+    - *approssimati*
+    - *brutali*
+    - *probabilistici*
+- 15/04/19
+  - Algoritmo di **Solovay-Strassen**
+    - Definizione di *Numero di Jacobi*
+    - Bicondizione di primalità (parziale)
+- 16/04/19
+  - **edit-distance**
