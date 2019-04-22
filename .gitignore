@@ -6,3 +6,4 @@
 *.aux
 *.yaml
 __pycache__
+*.zip
