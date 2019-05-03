@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Arcipelago",
+            "request": "launch",
+            "mainClass": "Arcipelago",
+            "projectName": "Amendola_abd1180a"
+        }
+    ]
+}

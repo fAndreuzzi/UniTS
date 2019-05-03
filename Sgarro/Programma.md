@@ -102,3 +102,7 @@
     - Bicondizione di primalità (parziale)
 - 16/04/19
   - **edit-distance**
+- 29/04/19
+  - **edit-distance** (esempio)
+  - **dijkstra**
+    - correttezza
