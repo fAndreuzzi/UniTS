@@ -24,7 +24,7 @@
     - relazione ricorsiva per la complessità
 - 14/03/19
   - *Master Theorem* (in italiano *Teorema maestro/guida*)
-    - calcolo della complesità di **MergeSort**
+    - calcolo della complesità di **merge-sort**
   - Definizione di *grafo*. Definizione di *heap*
 - 18/03/19
   - **heap-sort**
